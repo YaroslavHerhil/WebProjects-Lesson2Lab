@@ -4,3 +4,18 @@ html{
 .custom-div{
     background-color: blueviolet;
 }
+
+footer{
+    margin-top: 50%;
+    background-color: #7C87A7;
+    padding: 4%;
+}
+
+footer a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
