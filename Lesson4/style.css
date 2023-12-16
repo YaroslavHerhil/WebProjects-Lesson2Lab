@@ -1,0 +1,200 @@
+html{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.vertical-menu{
+    width: max-content;
+    list-style-type: none;
+    padding-left: 2%;
+    background-color: rgb(100, 100, 135);
+    height: 120vh;
+    position:absolute;
+    bottom:0;
+    top: 0;
+    margin: 0;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width 0.5s ease-in;
+    
+    
+}
+
+.vertical-menu-toggle{
+    padding: 10px;
+    cursor: pointer;
+    display: none;
+    height: 120vh;
+    position:absolute;
+    bottom:0;
+    top: 0;
+}
+.vertical-menu-icon{
+    height: 120vh;
+    position:absolute;
+    bottom:0;
+    top: 0;
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    background-color: rgb(100, 100, 135);
+    color: white;
+    text-align: center;
+}
+.vertical-menu-toggle:checked ~ .vertical-menu{
+    max-width: 500px;
+}
+
+
+.vertical-menu li{
+    width: fit-content;
+    padding: 4%;
+    cursor: pointer;
+
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.vertical-menu li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.vertical-menu li a:hover{
+    color : #B0B8BF;
+}
+.item-main{
+    background-image: url(svgtopng/main.png);
+}
+.item-progress{
+    background-image: url(svgtopng/line.png);
+}
+.item-rewards{
+    background-image: url(svgtopng/star.png);
+}
+.item-materials{
+    background-image: url(svgtopng/books.png);
+}
+.item-homework{
+    background-image: url(svgtopng/tasks.png);
+}
+.item-news{
+    background-image: url(svgtopng/message.png);
+}
+.item-payment{
+    background-image: url(svgtopng/card.png);
+}
+.item-schedule{
+    background-image: url(svgtopng/calendar.png);
+}
+.item-feedback{
+    background-image: url(svgtopng/pen.png);
+}
+.item-profile{
+    background-image: url(svgtopng/profile.png);
+}
+.item-faq{
+    background-image: url(svgtopng/question.png);
+}
+.item-info{
+    background-image: url(svgtopng/pin.png);
+}
+
+
+
+.headline{
+    text-align:right;
+}
+
+.cool-cinfo-block,.cool-feedback-block,.cool-profile-block, .cool-info-block,.cool-schedule-block, .cool-payment-block, .cool-news-block, .cool-materials-block, .cool-homework-block{
+    margin-left: auto;
+    margin-right: 0;
+    background-color: rgb(228, 234, 248);
+    border: 3px solid rgb(215, 239, 255);
+    border-radius: 5%;
+    width: 80vw;
+    height: 80vh;
+    
+}
+
+.cool-cinfo-block div{
+    display: inline-flex;
+    height: 40vh;
+    width: 25vw;
+    border:3px solid rgb(153, 191, 218);
+    background-color: rgb(216, 224, 224);
+}
+.cool-profile-block .picture{
+
+    width: 128px;
+    height: 128px;
+    background-color:cornflowerblue;
+    border-radius: 100%;
+}
+.cool-profile-block .info{
+    display: flex; justify-content: flex-end;
+    text-align: right;
+    background-color: antiquewhite;
+}
+
+
+.cool-feedback-block div{
+    border: 3px solid beige;
+    background-color: antiquewhite;
+    margin: 5%;
+}
+
+.cool-schedule-block div{
+    display: inline-flex;
+    height: 10vh;
+    width: 8vw;
+    border:3px solid rgb(153, 191, 218);
+    background-color: rgb(216, 224, 224);
+}
+.cool-schedule-block #active{
+    border:3px solid rgb(41, 132, 132);
+    background-color: rgb(63, 204, 162);
+}
+
+.cool-homework-block div div{
+    
+    display: inline-flex;
+    height: 25vh;
+    width: 10vw;
+    border:3px solid rgb(97, 150, 187);
+    background-color: azure;
+}
+.cool-payment-block div{
+    display: inline-flex;
+    height: 30vh;
+    width: 39vw;
+    border:3px solid rgb(153, 191, 218);
+    background-color: rgb(216, 224, 224);
+}
+
+.cool-info-block div{
+    width: 99%;
+    height: 30%;
+    padding: 1%;
+    background-color: rgb(216, 248, 248);
+}
+
+.cool-materials-block div{
+    display: inline-flex;
+    height: 25vh;
+    width: 10vw;
+    
+    background-color: azure;
+}
+
+.cool-news-block div{
+    display: inline-flex;
+    height: 10vh;
+    width: 15vw;
+    
+    background-color: azure;
+}
+
+
+
