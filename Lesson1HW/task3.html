@@ -8,26 +8,39 @@
 </head>
 <body>
     <h1>HTML Tutorial</h1>
+    <hr>
 
-    What is HTML?
+    <h2>What is HTML?</h2>
     
-    Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications.
+    <p><span class="highlighted-text">Hypertext Markup Language (<span class="underscored-text">HTML</span>)</span> is the standard markup language for creating web pages and web applications.</p>
     
-    Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.
+    <p>Web browsers receive <span class="underscored-text">HTML</span> documents from a web server or from local storage and render the documents into multimedia web pages. <span class="underscored-text">HTML</span> describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
     
-    HTML elements are the building blocks of HTML pages. With HTML constructs, images and other objects such as interactive forms may be embedded into the rendered page. HTML provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. HTML elements are delineated by tags, written using angle brackets. Tags such as <img /> and <input /> directly introduce content into the page. Other tags such as <p> surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the HTML tags, but use them to interpret the content of the page.
+    <p>HTML elements are the building blocks of HTML pages. With <span class="underscored-text">HTML</span> constructs, images and other objects such as interactive forms may be embedded into the rendered page. <span class="underscored-text">HTML</span> provides a means to create structured documents by denoting structural semantics for text such as headings, paragraphs, lists, links, quotes and other items. <span class="underscored-text">HTML</span> elements are delineated by <span class="tilted-text">tags</span>, written using angle brackets. Tags such as <span class="tag">&lt;img/&gt;</span> and <span class="tag">&lt;input/&gt;</span> directly introduce content into the page. Other tags such as <span class="tag">&lt;p&gt;</span> surround and provide information about document text and may include other tags as sub-elements. Browsers do not display the <span class="underscored-text">HTML</span> tags, but use them to interpret the content of the page.</p>
+    <hr>
+    <h2>Markup</h2>
     
-    Markup
+    <p><span class="underscored-text">HTML</span> markup consists of several key components, including those called <span class="tilted-text">tags</span> (and their <span class="tilted-text">attributes</span>), character-based <span class="tilted-text">data types</span>, <span class="tilted-text">character references</span> and <span class="tilted-text">entity references</span>. HTML tags most commonly come in pairs like <span class="tag">&lt;h1&gt;</span> and <span class="tag">&lt;/h1&gt;</span>, although some represent <span class="tilted-text">empty elements</span> and so are unpaired, for example <span class="tag">&lt;img&gt;</span>. The first tag in such a pair is the <span class="tilted-text">start tag</span>, and the second is the <span class="tilted-text">end tag</span> (they are also called <span class="tilted-text">opening tags</span> and <span class="tilted-text">closing tags</span>).</p>
     
-    HTML markup consists of several key components, including those called tags (and their attributes), character-based data types, character references and entity references. HTML tags most commonly come in pairs like <h1> and </h1>, although some represent empty elements and so are unpaired, for example <img>. The first tag in such a pair is the start tag, and the second is the end tag (they are also called opening tags and closing tags).
+    <p>Another important component is the <span class="underscored-text">HTML</span> <span class="tilted-text">document type declaration</span>, which triggers standards mode rendering.</p>
     
-    Another important component is the HTML document type declaration, which triggers standards mode rendering.
-    
-    The following is an example of the classic "Hello, World!" program:
-    
-       
-    Tags: CodingScripting head HTML Introduction to HTML Landing Links semantics Structure Text
-
+    <p>The following is an example of the classic "Hello, World!" program:</p>
+    <div class="markup">
+    <pre>
+    &#60;!DOCTYPE html&#62;<br>
+    &#60;html&#62;<br>
+        &#60;head&#62;<br>
+            &#60;title&#62;<span class="normal-text">This is a title</span>&#60;/title&#62;<br>
+        &#60;/head&#62;<br>
+        &#60;body&#62;<br>
+            &#60;p&#62;Hello world!&#60;/p&#62;<br>
+        &#60;/body&#62;<br>
+    &#60;/html&#62;
+    </pre>
+    </div>
+    <hr>
+    <p class="tags-container"><span class="tags-opening">Tags: </span><span class="tags-text"><span>CodingScripting</span> <span>head</span> <span>HTML</span> <span>Introduction to HTML</span> <span>Landing</span> <span>Links semantics</span> <span>Structure</span> <span>Text</span></span></p>
+    <br><br>
     <div class="custom-container">
         <div class = "navbar">
             <div class = "left-menu">
