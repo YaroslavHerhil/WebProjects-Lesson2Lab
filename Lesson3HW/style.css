@@ -1,0 +1,87 @@
+html{
+    height: 100%;;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+}
+h1{
+    text-align: center;
+}
+
+.pepper-container{
+    border: 2px solid;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    flex-direction:row;
+    
+}
+.pepper-container div{
+    border: 4px solid rgb(197, 197, 197);
+    border-radius: 30px;
+    padding: 10px;
+    margin: 10px;
+}
+.pepper-container div p{
+    text-align: center;
+    font-size: larger;
+    font-weight: 900;
+}
+/*------------------------------------------------------*/
+body{
+    margin: 0;
+    height: 100%;
+}
+
+.vertical-menu{
+
+    padding: 0px;
+    list-style: none;
+    
+    background-color: rgb(119, 119, 119);
+    white-space: nowrap;
+    max-width: 50px;
+    overflow: hidden;
+    transition: max-width 0.5s ease-in-out;
+}
+.vertical-menu li div span{
+    margin-left: 50px;
+}
+.vertical-menu li{
+    color: beige;
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: left center;
+}
+
+.vertical-menu li label{
+    cursor: pointer;
+}
+
+
+.vertical-menu li div{
+    height: 50px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+.vertical-menu img{
+    width: 50px;
+}
+
+
+.vertical-menu-toggle{
+    display: none;
+}
+.vertical-menu-toggle:checked ~ .vertical-menu{
+    max-width: 170px;
+}
+.vertical-menu li:hover{
+    color: rgb(206, 206, 199);
+    background-color:  rgb(102, 102, 102);
+}
+
+
+#edit{background-image: url(VerMenuIcons/edit.png);}
+#favorite{background-image: url(VerMenuIcons/favorites.png);}
+#history{background-image: url(VerMenuIcons/history.png);}
+#security{background-image: url(VerMenuIcons/security.png);}
+#settings{background-image: url(VerMenuIcons/settings.png);}
