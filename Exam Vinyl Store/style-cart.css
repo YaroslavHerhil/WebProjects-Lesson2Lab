@@ -1,0 +1,191 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    position: relative;
+
+    display: table;
+    color:#ddcce6;
+}
+
+body::after {
+    content: '';
+    display: block;
+    height: 100px; 
+}
+
+.header-container{
+    height: 50px;
+    background-color: #452f47;
+}
+
+
+#logo{
+    height:50px
+}
+
+
+.navbar-container{
+
+    height: 50px;
+    background-color: #241925;
+}
+.navbar a{
+    display: block;
+    background-color: #452f47;
+
+    height: calc(100% - 5px * 2);
+    width: 50px;
+    margin: 0;  
+    padding: 5px 10px;
+
+    text-align: center;
+    float: left;
+    color: #ddcce6;
+    text-decoration: none;
+
+    transition: all .5s ease;
+}
+#cart{
+    float: right;
+}
+
+.navbar a:hover{
+    background-color: #643d68;
+    float: left;
+    color: #ddcce6;
+    text-decoration: none;
+}
+
+
+.content-container{
+    background-image: url(images/Record-hp-GQ-7Jun17_istock_b.png);
+    background-color: #bb4ec785;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+
+    overflow: hidden;
+    display: table-row;
+    height:100%;
+
+}
+.content{
+    margin: auto;
+    color: #241925;
+    height:100%;
+    background-color: #e1d8e2;
+}
+.cart-table-container{
+    overflow: hidden;
+    height: calc(100% - 80px);
+}
+
+.cart{
+    width: calc(100% - 20px);
+    margin: 0px 10px;
+}
+
+.cart img{
+    height: 64px;
+    margin: 15px
+}
+.cart span{
+    display: block;
+    margin: auto;
+}
+.cart td:first-child{
+    display: flex;
+
+}
+.cart td:first-child a{
+    display: flex;
+    text-decoration: none;
+    color:#241925;
+}
+.cart td:first-child a:hover{
+    text-decoration: underline;
+}
+
+.cart td, th{
+    background-color: #cdc0d4;
+    padding: 10px;
+}
+
+.cart th:first-child{border-top-left-radius: 15px;}
+.cart th:last-child{border-top-right-radius: 15px;}
+.cart tr:last-child td:last-child{border-bottom-right-radius: 15px;}
+.cart tr:last-child td:first-child{border-bottom-left-radius: 15px;}
+.bottom-container{
+    height: 80px;
+    width: 100%;
+    display: inline-flex;
+}
+
+.payment{
+    background-color: #452f47;
+    padding: 10px;
+    font-size: 24px;
+    margin: 10px;
+    color: #cdc0d4;
+    border-radius: 5px;
+
+    cursor: pointer;
+    text-shadow: 5px 5px 10px #241925;
+
+    transition: all .5s ease-in-out;
+}
+.payment:hover{
+    background-color: #573c5a;
+    color:#a46caa
+}
+
+
+
+.total-price{ 
+    margin: 14px;
+    margin-left: auto;
+    font-weight: 500;
+    font-size: 36px;
+}
+
+
+.content, .footer, .navbar, .header{
+    margin: auto;
+
+    min-width: 550px;
+    width: 80vw;
+    height:100%;
+
+}
+
+.footer-container{
+    position: absolute;
+  bottom: 0;
+    width:100%;
+    height: 100px;
+    background-color: #241925;
+}
+
+.footer{
+  
+    display: flex;
+}
+
+.footer div{
+    padding: 10px;
+    width: calc(100% / 3);  
+    display: inline-block;
+    vertical-align: top; 
+}
+
+.footer span{
+    cursor: pointer;
+    line-height: 1.5;
+}
