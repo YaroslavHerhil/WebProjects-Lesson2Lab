@@ -76,6 +76,8 @@ body::after {
 
 }
 .content{
+    box-shadow: 5px 20px 20px 20px #130f1173;
+
     margin: auto;
     color: #241925;
     height:100%;
@@ -155,7 +157,7 @@ body::after {
 
 
 .products{
-    height: 100%;
+    height: calc(100% - 100px);
     width: 100%;
     display: flex;
     flex-wrap: wrap;
