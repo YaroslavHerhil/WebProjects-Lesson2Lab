@@ -1,58 +1,7 @@
-// let number = document.getElementById('number');
-
-// function random_number(){
-//     var new_number = Math.floor(Math.random() * 100);
-//     number.innerHTML = new_number;
-// }
 
 
 
-//----------------------------------------
 
-// let mouse_zone = document.getElementById('mouse_zone');
-// let span_pos = document.getElementById('pos');
-// let span_button = document.getElementById('button');
-
-// mouse_zone.addEventListener("mousemove", (event) => {
-//         span_pos.innerHTML = `X:${event.clientX} Y:${event.clientY}`
-// })
-
-// mouse_zone.addEventListener("mousedown", (event) => {
-//     var text = "";
-//     switch(event.button){
-//         case 0:
-//             text = "Left mouse button!";
-//             break;
-//         case 1:
-//             text = "Middle mouse button!";
-//             break;
-//         case 2:
-//             text = "Right mouse button!";
-//             break;
-//         default: 
-//             text = "????";
-//             break;
-//     }
-//     span_button.innerHTML = text;
-// })
-//--------------------------------
-// let hide_button = document.getElementById('hide_button');
-// let paragraph = document.getElementById('paragraph');
-
-// let is_hidden = false;
-
-
-// function hide_text(){
-//     console.log(is_hidden);
-//     if(is_hidden){
-//         is_hidden = false;
-//         paragraph.style.opacity = 0;
-//     }
-//     else{
-//         is_hidden = true;
-//         paragraph.style.opacity = 1;
-//     }
-// }
 
 //4
 let p_text = document.getElementById('text');
