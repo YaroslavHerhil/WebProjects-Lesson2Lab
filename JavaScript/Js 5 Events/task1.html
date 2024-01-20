@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        .random_number_content, .hide_text_content{
+            font-family: sans-serif;
+            text-align: center;
+            width: 300px;
+            border: 2px solid;
+            padding: 1%;
+            margin-bottom: 40px;
+        }
+        #number{
+            font-size: 36px;
+        }
+        #paragraph{
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="random_number_content">
+        <span>Press the button to generate a random number!</span><br>
+        <span id="number">0</span><br>
+        <button onclick="random_number()">Random number</button>
+    </div>
+    <div class="hide_text_content">
+        <button id="hide_button" onclick="hide_text()">Hide</button>
+        <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a esse illum necessitatibus accusamus aliquam ipsa aspernatur commodi quas, voluptas deserunt impedit autem iusto optio harum quis deleniti nesciunt dolores.</p>
+    </div>
+</body>
+</html>

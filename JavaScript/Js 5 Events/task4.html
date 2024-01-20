@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        #main-content{
+            font-family: sans-serif;
+            border: 3px solid;
+            
+            display: flex;
+        }
+        #menu{
+            float: left;
+            color: aliceblue;
+            background-color: navy;
+
+        }
+        #menu div{
+            text-shadow: 3px 3px 3px #f0f8ff79;
+            padding: 15px 10px;
+            transition: all .3s ease-out;
+        }
+
+        #menu div:hover{
+            cursor: pointer;
+            text-shadow: 5px 3px 3px #f0f8ffbd;
+            background-color: #00004e;
+        }
+
+        #content{
+            padding: 5px 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="main-content">
+        <div id="menu">
+            <div onclick="change_text('HTML')">HTML</div>
+            <div onclick="change_text('CSS')">CSS</div>
+            <div onclick="change_text('JS')">JS</div>
+        </div>
+        <div id="content">
+            <p id="text">Hypertext Markup Language (HTML) is the backbone of web development, acting as the structural foundation for creating and organizing content on the internet. With its tags and attributes, HTML facilitates the creation of text, images, links, and multimedia elements on web pages. Developers harness its power to craft seamless and visually appealing websites. From defining headings and paragraphs to embedding forms and media, HTML serves as the skeleton that browsers interpret to render engaging online experiences.</p>
+        </div>
+    </div>
+</body>
+</html>
