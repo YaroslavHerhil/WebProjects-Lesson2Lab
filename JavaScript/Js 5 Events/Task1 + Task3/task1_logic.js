@@ -6,20 +6,25 @@ function random_number(){
 }
 
 
+
+
 let hide_button = document.getElementById('hide_button');
 let paragraph = document.getElementById('paragraph');
 
 let is_hidden = false;
 
+let buffer = "";
+buffer = paragraph.innerHTML;
 
 function hide_text(){
+    debugger;
     console.log(is_hidden);
-    if(is_hidden){
-        is_hidden = false;
-        paragraph.style.opacity = 0;
+    if(!is_hidden){
+        paragraph.innerHTML = "";
+        is_hidden = true;
     }
     else{
-        is_hidden = true;
-        paragraph.style.opacity = 1;
+        paragraph.innerHTML = buffer;
+        is_hidden = false;
     }
 }
