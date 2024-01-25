@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        html{width: 100%;}
+        body{
+            margin: 0%;
+            font-family: sans-serif;
+            width: 100%;
+        }
+        .number-container{
+            display: flex;
+            background-color: bisque;
+            width: 200px;
+            height: 100px;
+        }
+        #number-span{
+            flex: 1;
+            background-color: azure;
+            display: block;
+            font-size: 64px;
+            text-align: center;
+        }
+        .menu div{
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            display: flex;
+        }
+
+        .menu div:hover{
+            cursor: pointer;
+            background-color: aqua;
+        }
+
+        .menu div span{
+            margin: auto;
+        }
+
+
+        .block-container{
+            border: 2px solid;
+            margin-left: auto;
+            margin-right: auto;
+            width: calc(100% - 50px);
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+
+            background-color: aliceblue;
+        }
+
+        .block-container div{
+            display: flex;
+            margin:5px;
+            background-color: aqua;
+            width:40px;
+            height: 20px;
+        }
+        .block-container #close{
+            cursor: pointer;
+            display: block;
+            margin: 0px;
+            color: rgb(199, 198, 198);
+            background-color: #333333;
+            
+            width: min-content;
+        }
+
+        #review-input{
+            vertical-align: top;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px 5px 50px 5px;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .comment-container{
+            padding: 20px;
+        }
+
+
+        .dropdown {
+            margin: 5px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content p{
+            padding: 10px 5px;
+        }
+        .dropdown-content p:hover{
+            background-color: #cacaca;
+            cursor: pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <input type="text" oninput="suggest_text()" onfocus="suggest_text()" id="search-input">
+        <div class="dropdown-content"  id="search-suggest">
+            <p>Example</p>
+        </div>
+      </div>
+
+
+    <div class="number-container">
+        <span id="number-span">0</span>
+        <div class="menu">
+            <div onselectstart="return false" onclick="number_change(true)">
+                <span onselectstart="return false">up</span>
+            </div>
+            <div onselectstart="return false" onclick="number_change(false)">
+                <span  >down</span>
+            </div>
+        </div>
+    </div><hr>
+    <div class="block-container" id="block-container">
+    </div>
+    <button onclick="add_block()">Add a block</button>
+    <div class="comment-container">
+        <input id="user-input" type="text"><br>
+        <input id="review-input" type="text"><br>
+        <button onclick="post_comment()">Post</button>
+    </div>
+    <div class="comments" id="comments">
+
+
+
+    </div>
+</body>
+</html>
