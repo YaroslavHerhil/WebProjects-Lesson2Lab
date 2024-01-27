@@ -1,0 +1,89 @@
+html{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.navbar{
+    position: fixed;
+        z-index: 100; 
+        bottom: 0; 
+        left: 0;
+        width: 100%;
+        height: 25px;
+        padding: 1%;
+        background-color: white;
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-between;
+}
+.left-menu a, .right-menu a{
+    margin-right: 10px;
+
+}
+.right-menu a
+{
+    margin-left: auto;
+}
+/*-------------------------------------*/
+.custom-list{
+    color: rgb(246, 255, 247);
+    margin: 25px;
+    padding: 25px 50px;
+    background-color: #a0d0a0;
+}
+
+.custom-list li{
+    margin: 1%;
+}
+.custom-list li #item-container{
+    overflow: visible;
+    margin-left: -30px;
+    padding: 0px 30px;
+    background-color: #78a578;
+}
+.custom-list li div div{
+    padding: 0%;
+    width: fit-content;
+    padding: .5% 1%;
+    background-color: #5a835a;
+}
+/*---------------------------------------------------*/
+.custom-check-list{
+    padding: 0px;
+}
+.custom-check-list li{
+    list-style-type: none;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-origin: content-box;
+    padding-left: 30px;
+    padding: 10px 0px 10px 20px;
+    
+    background-image: url(icons/unchecked_16.png);
+}
+
+.custom-check-list li span{
+    margin-left: 20px;
+}
+
+.odd{
+    background-color: #639eb6;
+}
+.even{
+    background-color: #79c2df;
+}
+
+#checked{
+    background-image: url(icons/checked_16.png);
+    text-decoration: line-through;
+    background-color: #9e9e9e;
+}
+/*------------------------------------------------------*/
+.example{
+    color: gray;
+}
+.synonyms{
+    color:#1d627e;
+}
+.highlights{
+    font-weight: 700;
+}

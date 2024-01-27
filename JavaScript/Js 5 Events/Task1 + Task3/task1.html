@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="task1_logic.js" defer></script>
+    <link rel="stylesheet" href="../footerstyle.css">
+    <style>
+        .random_number_content, .hide_text_content{
+            font-family: sans-serif;
+            text-align: center;
+            width: 300px;
+            border: 2px solid;
+            padding: 1%;
+            margin-bottom: 40px;
+        }
+        .hide_text_content{
+            transition: all 1s ease;
+        }
+        #number{
+            font-size: 36px;
+        }
+        #paragraph{
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="random_number_content">
+        <span>Press the button to generate a random number!</span><br>
+        <span id="number">0</span><br>
+        <button onclick="random_number()">Random number</button>
+    </div>
+    <div class="hide_text_content">
+        <button id="hide_button" onclick="hide_text()">Hide</button>
+        <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla a esse illum necessitatibus accusamus aliquam ipsa aspernatur commodi quas, voluptas deserunt impedit autem iusto optio harum quis deleniti nesciunt dolores.</p>
+    </div>
+
+    <div class="custom-container">
+        <div class = "navbar">
+            <div class = "left-menu">
+                <a href="../Task1 + Task3/task1.html" >Task 1 + Task 3</a>
+                <a href="../Task2/task2.html">Task 2</a>
+                <a href="../Task4/task4.html">Task 4</a>
+                <a href="../task 5/index.html">Task 5</a>
+                <a href="../Task6/task6.html">Task 6</a>
+                <a href="../Task 7/task7.html">Task 7</a>
+                <a href="../task 8/index.html">Task 8</a>
+                <a href="../Task 9/index.html">Task 9</a>
+                <a href="../Task 10/index.html">Task 10</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

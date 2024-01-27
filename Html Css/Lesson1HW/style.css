@@ -1,0 +1,69 @@
+.navbar{
+    position: fixed;
+        z-index: 100; 
+        bottom: 0; 
+        left: 0;
+        width: 100%;
+        height: 25px;
+        padding: 1%;
+        background-color: white;
+        border: 2px solid black;
+        display: flex;
+        justify-content: space-between;
+}
+.left-menu a, .right-menu a{
+    margin-right: 10px;
+
+}
+.right-menu a
+{
+    margin-left: auto;
+}
+
+html{
+    font-family: sans-serif;
+}
+
+/*------------------------------------------*/
+h1, h2{
+    text-align: center;
+}
+
+.underscored-text{
+    text-decoration:dotted underline;
+}
+.highlighted-text{
+    font-weight: 900;
+}
+
+.tag{
+    background-color: bisque;
+    color: rgb(172, 0, 0);
+}
+
+.tilted-text{
+    font-style: italic;
+}
+
+.markup{
+    padding: 1%;
+    background-color: gainsboro;
+    color: rgb(172, 0, 0);
+}
+.markup pre{
+    font-size: small;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 80%;
+}
+
+.tags-container{
+    font-size: small;
+}
+.tags-opening{
+    font-weight: 800;
+}
+.tags-text span{
+    background-color: gainsboro;
+    color: rgb(48, 48, 145);
+}
+ 

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .form-1{
+            background-color: #c1fad9;
+            padding: 10px 20px;
+            width: max-content;
+            margin-bottom: 30px;
+        }
+
+        .form-1 input{
+            margin-bottom: 10px;
+        }
+        #remember-me-label{
+            font-size: small;
+            color: rgb(107, 107, 107);
+        }
+        .form-1 button{
+            padding: 5px 10px;
+            background-color: #c2ecd4;
+        }
+
+
+
+        .form-2{
+            background-color: #fac1c1;
+            padding: 10px 20px;
+            width: max-content;
+            margin-bottom: 30px;
+        }
+        .form-2-container {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        .form-2-container div{
+            margin: 15px
+        }
+        .form-2-container button{
+            padding: 5px 10px;
+            grid-column: 1 / span 2;
+            margin: 5px 15px;
+            background-color: #ecc2c2;
+        }
+
+        .form-3{
+            background-color: #f0c1fa;
+            padding: 10px 20px;
+            width: max-content;
+            margin-bottom: 30px;
+        }
+        .form-3-container {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        .form-3-container div{
+            margin: 15px
+        }
+        .form-3-container button{
+            padding: 5px 10px;
+            grid-column: 1 / span 2;
+            margin: 5px 15px;
+            background-color: #eb98e6;
+        }
+        #skills{
+            display: flex;
+            grid-column: 1 / span 2;
+            flex-wrap: wrap;
+        }
+        
+        #skills label{
+            font-size: small;
+            margin: 0px 1px
+        }
+        #skills div{
+            font-size: small;
+            background-color: #eb98e6;
+            margin: 1px;
+        }
+
+        #info-grid{
+            font-size: larger;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            background-color: #c59cfa;
+            padding: 5px 10px;
+            width: max-content;
+            margin-bottom: 30px;
+        }
+
+        #info-grid div{
+            border: 2px solid #612fa3;
+            padding: 5px 30px;
+        }
+
+
+        .form-4{
+            display: grid;
+            background-color: #b5deff;
+            padding: 10px 20px;
+            width: max-content;
+            margin-bottom: 30px;
+        }
+        .form-4 input{
+            width:40px
+        }
+        .form-4 label{
+            display: block;
+            padding: 5px;
+            border: 1px solid #5c90bb;
+            font-weight: 700;
+        }
+        .form-4 button{
+            margin-top: 5px;
+            background-color: #71bfff;
+
+        }
+
+        .color-picker{
+            display: flex;
+            border: 2px solid #5c90bb;
+        }
+        #red-label{
+            background-color: #ffa7a7;
+            border-color: #7c3c3c;
+            color: #8a0000;
+        }
+        #green-label{
+            background-color: #a7ffab;
+            border-color: #477c3c;
+            color: #008a22;
+        }
+        #blue-label{
+            background-color: #a7c6ff;
+            border-color: #3c407c;
+            color: #00028a;
+        }
+        #color-container{
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #a7c6ff;
+            padding: 15px 20px;
+        }
+        #color-container div{
+            margin: 10px;
+            border: 1px solid;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-items: center;
+            align-items: center;
+        }
+        #color-container span{
+            margin: 2px 10px;
+        }
+
+
+        #color{
+            margin: 0px;
+            width: 50px;
+            height: 50px;
+            background-color:rgb(97, 47, 163);
+        }
+
+    </style>
+</head>
+<body>
+    <ol>
+       <li>
+        <form class="form-1" >
+            <label for="user-login-input">Login:</label><br>
+            <input type="text" id="user-login-input-1"><br>
+            <label for="password-login-input">Password:</label><br>
+            <input type="password" id="password-login-input-1"><br>
+            <label for="remember-me" id="remember-me-label">Remember me:</label> <input type="checkbox" id="remember-me">
+            <br><button onclick="Hello_user()">Submit</button>
+
+        </form>
+
+        
+       </li> 
+
+       <li>
+        <form class="form-2" >
+            <div class="form-2-container">
+                <div>
+                    <label for="login-input-2">Login:</label><br>
+                    <input type="text" id="login-input-2"><br>
+                </div>
+                <div>
+                    <label for="email-input-2">Email:</label><br>
+                <input type="email" id="email-input-2"><br>
+                </div>
+                <div>
+                    <label for="password-input-2">Password:</label><br>
+                    <input type="password" id="password-input-2"><br>
+                </div>
+                <div>
+                    <label for="password-confirm-2">Confirm Password:</label><br>
+                    <input type="password" id="password-confirm-2"><br>
+                </div>
+            <button onclick="email_sent()" >Submit</button>
+            </div>
+        </form>
+       </li>
+       <li>
+        <form class="form-3" onsubmit="return false" >
+            <div class="form-3-container">
+                <div>
+                    <label for="firstname-input-3">Firstname:</label><br>
+                    <input type="text" id="firstname-input-3"><br>
+                </div>
+                <div>
+                    <label for="lastname-input-3">Lastname:</label><br>
+                    <input type="text" id="lastname-input-3"><br>
+                </div>
+                <div>
+                    <label for="birthdate-input-3">Birthdate:</label><br>
+                    <input type="date" id="birthdate-input-3"><br>
+                </div>
+                <div>
+                    <span>Gender:</span><br>
+                    <input type="radio" id="male" name="gender-group" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="gamer" name="gender-group" value="Gamer">
+                    <label for="gamer">Gamer</label>
+                </div>
+                <div>
+                    <label for="country-menu-3">Country:</label><br>
+                        <select name="country-menu-3" id="country-menu-3">
+                                <option value="Cambodia">Cambodia</option>
+                                <option value="Colomboia">Colomboia</option>
+                                <option value="Mars">Mars</option>
+                                <option value="Legacy of the Dragonborn">Legacy of the Dragonborn</option>
+                        </select>
+                </div>
+                <div>
+                    <label for="city-menu-3">City:</label><br>
+                        <select name="city-menu-3" id="city-menu-3">
+                                <option value="London">London</option>
+                                <option value="New York">New York</option>
+                                <option value="Luke">Luke</option>
+                                <option value="Kyiv">Kyiv</option>
+                        </select>
+                </div>
+                <div id="skills">
+                    <span>Skills:</span>
+                    <div>
+                        <input type="checkbox" id="check-1" value="CSS">
+                        <label for="check-1">CSS</label>
+                    </div>
+                    
+                    
+                    <div>
+                        <input type="checkbox" id="check-2" value="PHP">
+                        <label for="check-2">PHP</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="check-3" value="Amish rituals">
+                        <label for="check-3">Amish rituals</label>
+                    </div>
+
+                    <div>
+                        <input type="checkbox" id="check-4" value="JS">
+                        <label for="check-4">JS</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="check-5" value="Python">
+                        <label for="check-5">Python</label>
+                    </div>
+                    
+                    <div>
+                        <input type="checkbox" id="check-6" value="Female">
+                        <label for="check-6">Female</label>
+                    </div>
+                    
+                </div>
+            <button onclick="get_info()" >Submit</button>
+            </div>
+        </form>
+
+
+
+        <div id="info-grid">
+
+
+        </div>
+       </li>
+       <li>
+        <form class="form-4" onsubmit="return false" >
+            <div class="color-picker">
+                <label for="color-red" id="red-label">R</label>
+                <input type="number" id="color-red">
+                <label for="color-green" id="green-label">G</label>
+                <input type="number" id="color-green">
+                <label for="color-blue" id="blue-label">B</label>
+                <input type="number" id="color-blue">
+            </div>
+            <button onclick="add_color()">Add Colour</button>
+        </form>
+
+        <div id="color-container">
+           
+        </div>
+       </li>
+
+
+
+    </ol>
+</body>
+</html>

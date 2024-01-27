@@ -1,0 +1,45 @@
+html{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+.custom-list{
+    padding-left: 20px;
+}
+.custom-sublist li{
+    list-style-type: none;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-size: 90%;
+}
+#winter li{
+    background-image: url(snowflake.png);
+}
+#spring li{
+    background-image: url(leaf.png);
+}
+#summer li{
+    background-image: url(sun.png);
+}
+#autumn li{
+    background-image: url(autumnleaf.png);
+}
+/*--------------------------*/
+.customlist-rootlist{
+    list-style-type:upper-roman;
+}
+.customlist-rootlist li::marker{   
+    color: #000000; 
+    font-weight: bold;
+}
+.customlist-rootlist li{   
+    color: #000080; 
+     text-decoration: underline;
+}
+.customlist-rootlist ol{
+    list-style-type:decimal;
+}
+.customlist-rootlist ol ol{
+    list-style-type:lower-latin;
+}
