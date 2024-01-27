@@ -108,15 +108,51 @@
         }
 
 
+        .calc-grid{
+            margin: 10px;
+            display: grid;
+            grid-template-columns: 40px 40px 40px 40px;
+            grid-template-rows: 50px 50px 50px 50px;
+        }
+        #button-equals{
+            grid-column: 2 / span 2;
+        }
+        #math-input{
+            font-size: 24px;
+            margin: 10px;
+            padding-bottom: 0px;
+            width: 150px;
+        }
+        #back-button{
+            display: none;
+            opacity: 0;
+            background-color: #333333;
+            color: #cacaca;
+            text-align: center;
+            padding: 5px;
+            width:60px;
+            position: fixed;
+            border-radius: 5px;
+            bottom: 50px;
+            right: 50px; 
+
+            transition: all .3s ease-out;
+        }
+        #back-button:hover{
+            background-color: #474747;
+            cursor: pointer;
+        }
+
     </style>
 </head>
-<body>
+<body onscroll="go_back()">
     <div class="dropdown">
         <input type="text" oninput="suggest_text()" onfocus="suggest_text()" id="search-input">
         <div class="dropdown-content"  id="search-suggest">
             <p>Example</p>
         </div>
       </div>
+      <hr>
 
 
     <div class="number-container">
@@ -143,5 +179,34 @@
 
 
     </div>
+    <hr>
+    <input type="text" id="math-input">
+
+
+
+    <div class="calc-grid">
+        <button onclick="calculator_button_press(this)">7</button>
+        <button onclick="calculator_button_press(this)">8</button>
+        <button onclick="calculator_button_press(this)">9</button>
+        <button onclick="calculator_button_press(this)">+</button>
+        <button onclick="calculator_button_press(this)">4</button>
+        <button onclick="calculator_button_press(this)">5</button>
+        <button onclick="calculator_button_press(this)">6</button>
+        <button onclick="calculator_button_press(this)">-</button>
+        <button onclick="calculator_button_press(this)">1</button>
+        <button onclick="calculator_button_press(this)">2</button>
+        <button onclick="calculator_button_press(this)">3</button>
+        <button onclick="calculator_button_press(this)">*</button>
+        <button onclick="calculator_button_press(this)">0</button>
+        <button id="button-equals" onclick="calculator_calculate()">=</button>
+        <button onclick="calculator_button_press(this)">/</button>
+
+
+
+
+    </div>
+
+
+    <div id="back-button" onclick="window. scrollTo(0, 0)">Go back</div>
 </body>
 </html>

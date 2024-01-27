@@ -151,3 +151,45 @@ function suggest_text(){
     }
 }
 
+/*pasfjadaosp[dop[aodp[aodopaodp[a[sdp[aos[dpo]]]]]]] */
+
+
+let math_input = document.getElementById("math-input");
+let answer;
+
+function calculator_button_press(element){
+    if(math_input.value == answer){
+        math_input.value = ""
+        math_input.style.color = "Black";
+    }
+    math_input.value += element.textContent
+
+}
+
+function calculator_calculate(){
+    try{
+        answer = eval(math_input.value);
+        math_input.style.color = "Grey";
+
+    }
+    catch{
+        answer = "error";
+        math_input.style.color = "Maroon";
+
+    }
+    math_input.value = answer;
+}
+
+/**doapdop[pppp[ao[popop[op[odp[oap[ospd[o]]]]]]]] */
+let go_back_button = document.getElementById("back-button");
+
+function go_back(){
+    if(window.scrollY >= 100){
+        go_back_button.style.display = "block"
+        go_back_button.style.opacity = 1;
+    }
+    else{
+        go_back_button.style.opacity = 0;
+        go_back_button.style.display = "none"
+    }
+}
