@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="../footerstyle.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="task2_logic.js" defer></script>
-    <link rel="stylesheet" href="../footerstyle.css">
+    <script src="main.js" defer></script>
     <style>
-        html{
-            height: 100%;
-            width: 100%;
-        }
-        body{
-            margin: 0%;
-            height: 100%;
-            width: 100%;
-        }
-        #mouse_zone{
-            font-family: sans-serif;
-            padding: 2%;
-            font-weight: 700;
-            line-height: 200%;
-
-            background-color: aqua;
-            height: 100%;
-            width: 100%;
-        }
         
+        #content{
+
+            font-family: sans-serif;
+            word-wrap: break-word;
+        }
+        #content p{
+            padding: 5px 30px;
+        }
+
+        
+
+        .menu{
+            padding: 0px 20px;
+            display: flex;
+            background-color: bisque;
+        }
+        .menu button{
+            margin: 15px;
+            margin-left: auto;
+        }
+
     </style>
 </head>
 <body>
-    <div id="mouse_zone">
-        <span id="pos">X:0 Y:0</span><br>
-        <span id="button"></span>
+    <div id="content">
+        
     </div>
 
     <div class="custom-container">

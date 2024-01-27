@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="../footerstyle.css">
+
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #navbar {
+          overflow: hidden;
+          background-color: #8c72bd;
+          border-radius: 10px;
+        }
+        
+        #navbar .navbar-item {
+          float: left;
+          font-size: 16px;
+          color: white;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        .dropdown {
+          float: left;
+          overflow: hidden;
+        }
+        
+        .dropdown #dropdown-button {
+          font-size: 16px;  
+          border: none;
+          outline: none;
+          color: white;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+        }
+        
+        #navbar .navbar-item:hover, .dropdown:hover #dropdown-button {
+          background-color: #ff00c8;
+          cursor: pointer;
+        }
+        
+        #dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #fceef9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+        
+        <div id="navbar">
+          <span class="navbar-item">Main</span>
+          <span class="navbar-item">Info</span>
+          <div class="dropdown">
+            <button id="dropdown-button">Items</button>
+            <div id="dropdown-content">
+                <ul>
+                    <p>Item 3</p>
+                    <p>Item 2</p>
+                    <p>Item 1</p>
+                </ul>
+            </div>
+          </div> 
+          <span class="navbar-item">News</span>
+        </div>
+        
+        <div class="custom-container">
+            <div class = "navbar">
+                <div class = "left-menu">
+                    <a href="../Task1 + Task3/task1.html" >Task 1 + Task 3</a>
+                    <a href="../Task2/task2.html">Task 2</a>
+                    <a href="../Task4/task4.html">Task 4</a>
+                    <a href="../task 5/index.html">Task 5</a>
+                    <a href="../Task6/task6.html">Task 6</a>
+                    <a href="../Task 7/task7.html">Task 7</a>
+                    <a href="../task 8/index.html">Task 8</a>
+                    <a href="../Task 9/index.html">Task 9</a>
+                    <a href="../Task 10/index.html">Task 10</a>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

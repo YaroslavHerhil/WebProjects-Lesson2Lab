@@ -4,35 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="task2_logic.js" defer></script>
     <link rel="stylesheet" href="../footerstyle.css">
+    <script src="main.js" defer></script>
     <style>
-        html{
-            height: 100%;
-            width: 100%;
+        .content{
+            padding: 20px;
+            background-color: bisque ;
+            max-width: 300px;
         }
-        body{
-            margin: 0%;
-            height: 100%;
-            width: 100%;
+        .content progress, button{
+            margin:auto;
+            display: block;
         }
-        #mouse_zone{
-            font-family: sans-serif;
-            padding: 2%;
-            font-weight: 700;
-            line-height: 200%;
-
-            background-color: aqua;
-            height: 100%;
-            width: 100%;
-        }
-        
     </style>
 </head>
 <body>
-    <div id="mouse_zone">
-        <span id="pos">X:0 Y:0</span><br>
-        <span id="button"></span>
+    
+    <div class="content">
+        <progress id="bar" value="0"></progress>
+        <button onclick="progress_progress_bar()">Proggress the progress!</button>
     </div>
 
     <div class="custom-container">
