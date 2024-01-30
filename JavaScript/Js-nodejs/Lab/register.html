@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .register-form{
+            background-color: #ffcf67;
+            padding: 10px 20px;
+            width: max-content;
+            margin-bottom: 30px;
+        }
+        .register-form-container {
+            display: grid;
+            grid-template-columns: 400px;
+        }
+        .register-form-container input{
+            width: calc(100% - 10px);
+        }
+        .register-form-container label{
+            display: inline-block;
+            font-size: smaller;
+            width: calc(100% - 10px);
+        }
+        .register-form-container div{
+            margin: 15px
+        }
+        .register-form-container button{
+            padding: 5px 10px;
+            margin: 5px 15px;
+            background-color: #f3d7a4;
+        }
+
+        #email-error,#pass-error,#cpass-error{
+            color: maroon;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <form class="register-form" onsubmit="return false" >
+        <div class="register-form-container">
+            <div>
+                <label for="email-input"><span>Email:</span><span id="email-error"></span></label><br>
+            <input type="email" id="email-input"><br>
+            </div>
+            <div>
+                <label for="password-input"><span>Password:</span><span id="pass-error"></span></label><br>
+                <input type="password" id="password-input"><br>
+            </div>
+            <div>
+                <label for="password-confirm"><span>Confirm Password:</span><span id="cpass-error">poblem</span></label><br>
+                <input type="password" id="password-confirm"><br>
+            </div>
+        <button onclick="register()" >Submit</button>
+        </div>
+    </form>
+</body>
+</html>

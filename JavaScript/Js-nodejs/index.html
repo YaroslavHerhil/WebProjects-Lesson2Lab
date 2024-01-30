@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="main.js" defer></script>
+    <script type="text/javascript" src="public/main.js" defer></script>
     <style>
         .user-form{
             font-family: sans-serif;
@@ -68,7 +68,7 @@
     </ul>
 
 
-    <form action="/submit-form" class="user-form">
+    <form action="/submit-form" class="user-form" method="post">
         <label for="text-input">Text:</label><br>
         <input type="text" name="text-input" id="text-input">
         <br><hr>
@@ -92,7 +92,7 @@
         <label for="radio-5">Radio 5</label><br>
 
         
-        <input type="button" id="user-button" onclick="get_text_value('text-input')">
+        <input type="submit" id="user-button" onclick="get_text_value('text-input')">
     </form>
     <br>
 
