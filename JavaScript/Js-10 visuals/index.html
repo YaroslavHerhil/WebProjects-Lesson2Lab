@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        body, html{
+            height:100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #canvas{
+            position: relative;
+            display: block;
+        }
+        #menu{
+            font-family: sans-serif;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.226);
+            top: 0;
+            display: block;
+
+            align-items: center;
+
+            background-color: rgb(230, 223, 230);
+            width: 300px;
+            height: 200px;
+            position: fixed;
+            z-index: 100;
+        }
+        
+        #menu div{
+            display: grid;
+            grid-template-columns: auto 200px;
+        }
+        #brush-select{
+            display: block;
+        }
+        #brush-select button{
+            width: 35px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="my-canvas"></canvas>
+    <div id="menu">
+        <div>
+            <label for="tool-select">Tool:</label>
+            <select name="tool-select" id="tool-select" onchange="check_shape()" onfocus="this.selectedIndex = -1;">
+                <option value="0">Circle</option>
+                <option value="1">Rectangle</option>
+                <option value="2">Brush</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="brush-select" id="brush-label">Brush:</label>
+            <div id="brush-select">
+                <button onclick="brush = '0'">⚫</button>
+                <button onclick="brush = '1'">⬛</button>
+                <button onclick="brush = '2'">⬜</button>
+
+            </div>
+        </div>
+        <div>
+            <label for="color-select">Color:</label>
+            <input type="color" name="color-select" id="color-select">
+        </div>
+        <div>
+            <label id="width-label" for="width-select">Size:</label>
+            <input value="20" type="range" name="width-select" id="width-select">
+        </div>
+        <div>
+            <label id="height-label" for="height-select">Height:</label>
+            <input value="20" type="range" name="height-select" id="height-select">
+        </div>
+        
+    </div>
+</body>
+</html>

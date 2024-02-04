@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Info</title>
     <script src="main.js" defer></script>
     <style>
         body{
@@ -18,7 +18,7 @@
         .register-form-container {
             transition: all .5s ease-out;
             display: grid;
-            grid-template-columns: 400px;
+            grid-template-columns: 200px 200px;
         }
         .register-form-container input{
             width: calc(100% - 10px);
@@ -32,6 +32,7 @@
             margin: 15px
         }
         .register-form-container button{
+            grid-column: 1 / span 2;
             padding: 5px 10px;
             margin: 5px 15px;
             background-color: #f3d7a4;
@@ -57,33 +58,37 @@
     </style>
 </head>
 <body>
-    <form class="register-form" onsubmit="ret" action="/info.html">
+    <form class="register-form" onsubmit="return false" >
         <div class="register-form-container">
             <div>
-                <label for="email-input"><span>Email:</span><span id="email-error"></span></label><br>
-            <input type="email" id="email-input"><br>
+                <label for="firstname"><span>Firstname:</span></label><br>
+                <input type="text" id="firstname"><br>
             </div>
             <div>
-                <label for="password-input"><span>Password:</span><span id="pass-error"></span></label><br>
-                <input type="password" id="password-input"><br>
-                
+                <label for="lastname"><span>Lastname:</span></label><br>
+                <input type="text" id="lastname"><br>
             </div>
-            <ul id="guidelines">
-                Password must include:
-                <li>
-                    At least 8 symbols
-                </li>
-                <li>At least 1 lowercase letter</li>
-                <li>At least 1 uppercase letter</li>
-                <li>At least 1 number</li>
-                <li>At least 1 special symbol</li>
-                
-            </ul>
             <div>
-                <label for="password-confirm"><span>Confirm Password:</span><span id="cpass-error"></span></label><br>
-                <input type="password" id="password-confirm"><br>
+                <label for="birthyear"><span>Year of birth:</span></label><br>
+                <input type="number" id="birthyear"><br>
             </div>
-        <button  >Submit</button>
+            <div>
+                <label for="gender-select">Gender:</label><br>
+                <select name="gender-select" id="gender-select">
+                        <option value="M">Male</option>
+                        <option value="G">Gamer</option>
+                        <option value="-">Rather not disclose</option>
+                </select>
+            </div>
+            <div>
+                <label for="telephone"><span>Phone:</span></label><br>
+                <input type="tel" id="telephone"><br>
+            </div>
+            <div>
+                <label for="skype-tag"><span>Skype:</span></label><br>
+                <input type="text" id="skype-tag"><br>
+            </div>
+            <button onclick="register()" >Submit</button>
         </div>
     </form>
 </body>
