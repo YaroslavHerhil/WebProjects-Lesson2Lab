@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        body, html{
+            font-family: sans-serif;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+<body>
+    <h1>
+        ECMAScript
+    </h1>
+    <ul>
+        <li>ECMAScript 5 (ES5)
+            <ul>
+                <li>JS</li>
+            </ul>
+        </li>
+        <li>ECMAScript 6 (ES6)
+            <ul>
+                <li>Classes</li>
+                <li>Modules(Import, Export)</li>
+            </ul>
+        </li>
+    </ul>
+    <input type="text" id="name-input">
+    <button onclick="axios_test()">Axios</button>
+    <script>
+        let name = document.getElementById('name-input');
+
+        function axios_test(){
+            axios.get(`https://api.github.com/users/${name.value}`)
+            .then(response => {
+            console.log(response);
+            })
+            .catch(error =>{
+            console.log(error);
+            });
+        }
+ </script>
+</body>
+</html>

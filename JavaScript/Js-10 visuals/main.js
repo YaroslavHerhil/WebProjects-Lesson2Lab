@@ -81,6 +81,7 @@ function check_shape(){
             brush_label.style.display = "block";
             brush_s.style.display = "block";
             width_s.max = 100;
+            height_s.max = 500;
             break;
     }
 }

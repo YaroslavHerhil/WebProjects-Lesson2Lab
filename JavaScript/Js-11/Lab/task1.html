@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #json-grid {
+            font-family: sans-serif;
+            display: grid;
+            grid-template-columns: 4fr 100px 4fr;
+            grid-template-rows: auto 500px;
+            margin: 20px 30px;
+        }
+
+        #prompt-1 {
+            grid-column: 1;
+            margin: 20px;
+        }
+
+        #prompt-2 {
+            margin: 20px;
+            grid-column: 3;
+        }
+
+        #format-button {
+            grid-column: 2;
+            grid-row: 2;
+
+            margin: 0px 10px;
+            border-radius: 5px;
+            font-size: xx-large;
+        }
+
+        #json-input {
+            padding: 10px;
+            padding-bottom: 480px;
+            background-color: beige;
+            border-radius: 10px;
+        }
+
+        #json-output {
+            background-color: beige;
+            border: 2px solid;
+            border-radius: 10px;
+            padding: 10px;
+            overflow-x: scroll;
+        }
+
+        #error-message {
+            float: right;
+            color: maroon;
+        }
+    </style>
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <div id="json-grid">
+        <div id="prompt-1">
+            <span>Enter JSON data:</span>
+            <span id="error-message"></span>
+        </div>
+
+        <span id="prompt-2">Formatted JSON data:</span>
+        <input id="json-input" type="text">
+        <div id="json-output">
+            <pre id="json-pretty-output">
+
+            </pre>
+        </div>
+        <button onclick="format_json()" id="format-button">▶</button>
+    </div>
+</body>
+
+</html>

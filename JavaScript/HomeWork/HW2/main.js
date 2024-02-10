@@ -160,7 +160,7 @@ let functions = [
                 break;
             case "3":
             case "3)":
-                alert("No answer is even worse than no answer. Double incorrect");
+                alert("No answer is even worse than wrong answer. Double incorrect");
                 points = points- 2;
                 break;
             default:
@@ -174,7 +174,7 @@ let functions = [
         switch(second){
             case "1":
             case "1)":
-                alert("Disrespect agains celestial bodies. Double Incorrect");
+                alert("Disrespect against celestial bodies. Double Incorrect");
                 points = points- 2;
                 break;
             case "2":
@@ -184,7 +184,7 @@ let functions = [
                 break;
             case "3":
             case "3)":
-                alert("Answering with a question is rude. Incorrect");
+                alert("Answering a question with a question is rude. Incorrect");
                 points = points- 1;
                 break;
             default:
@@ -193,7 +193,7 @@ let functions = [
         }
 
         alert("Alright, last question")
-        let third = prompt("Who is standing outside your window?\n1)Noone, silly!\n2)They are watching\n3)What is this - 2014? When was the last time this was even funny? Thats it, I'm out of here");
+        let third = prompt("Who is standing outside your window?\n1)Noone, silly!\n2)They are watching\n3)What is this - 2014? When was this even funny? Thats it, I'm out of here");
 
         switch(third){
             case "1":
@@ -213,10 +213,10 @@ let functions = [
                 break;
         }
         if(points == 6){
-            alert("Congratulations! You got the actual maximum amount of points. Your prize is here: \n");
+            alert("Congratulations! You got the actual maximum amount of points.\n");
         }
         else if (points == -4){
-            alert("Congratulations! You got the actual minimum amount of points. Your prize is: ");
+            alert("Congratulations! You got the actual minimum amount of points.");
         }
         else{
             alert("Congratulations! You got the maximum amount of points(Which is " + points + "). You dont get a prize");

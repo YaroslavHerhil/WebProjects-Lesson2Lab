@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <title>Document</title>
+    <style>
+        body, html{
+            font-family: sans-serif;
+        }
+        #info-grid{
+            width: fit-content;
+            display: grid;
+            grid-template-columns: 100px 100px 50px 150px;
+            grid-template-rows: 66px 66px 66px 100px 50px;
+            border: 2px solid;
+            align-items: center;
+        }
+        #info-grid img{
+            border-radius: 100%;
+            margin: auto;
+            height: 150px;
+            width: auto;
+            grid-column: span 2;
+            grid-row: span 3;
+        }
+        #info-grid div{
+            display: inline;
+            margin: 10px 10px;
+        }
+        #info-grid span{
+            border: 1px solid ;
+        }
+        #name-span, #login-span, #email-span{
+            border-top: 2px solid;
+            font-weight: 700;
+        }
+        #bio-span{
+
+            border-top: 2px solid;
+            grid-column: span 4;
+            grid-row: 4;
+        }
+        a{
+            margin: 10px;
+            grid-column: span 4;
+        }
+
+        #menu-cont{
+            background-color: gray;
+            border: 2px solid;
+            width: 400px;
+            height: 50px;
+        }
+        #menu-cont button{
+            margin: 10px;
+            height: 30px;
+            width: 80px;
+            float: right;
+        }
+        #menu-cont input{
+            margin: 10px;
+            height: 30px;
+            width: 200px;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <span>Github user name:</span>
+    <div id="menu-cont">
+        <input type="text" id="user-input">
+        <button onclick="get_user_data()" id="find-button">Find</button>
+    </div>
+    <div id="info-grid">
+        <img src="Blank.png" alt="avatar" id="avatar">
+        <div class="fodder">Login:</div>
+        <div id="login-span"></div>
+        <div class="fodder">Name:</div>
+        <div id="name-span"></div>
+        <div class="fodder">Email:</div>
+        <div id="email-span"></div>
+        <div id="bio-span"></div>
+        
+        <a id="repos-url" href=""></a>
+        <a id="html-url" href=""></a>
+    </div>
+</body>
+</html>

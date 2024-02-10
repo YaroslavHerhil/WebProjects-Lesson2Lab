@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        body, html{
+            font-family: sans-serif;
+        }
+        #user-cont{
+            display: flex;
+            flex-wrap: wrap;
+            width: 600px;
+            border: 2px solid;
+            background-color: #fdf7ef;
+            padding: 10px 20px;
+        }
+        #user-cont div{
+            background-color: #fde7ca;
+            border: 2px solid;
+            text-align: center;
+            min-width: 100px;
+            width: fit-content;
+            padding: 10px;
+            margin: 5px 10px;
+            
+        }
+        #user-info-cont{
+            display: grid;
+            grid-template-columns: auto auto;
+            width: 600px;
+            border: 2px solid;
+            background-color: #fdf7ef;
+            padding: 10px 20px;
+            
+        }
+        #user-info-cont span{
+            padding: 5px 10px;
+            border: 1px solid;
+        }  
+    </style>
+</head>
+<body>
+    <span>Users:</span>
+    <div id="user-cont">
+
+    </div>
+    <div>
+        <span>User Info:</span>
+        <div id="user-info-cont">
+
+        </div>
+    </div>
+    
+
+</body>
+</html>
