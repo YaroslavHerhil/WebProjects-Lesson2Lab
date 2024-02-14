@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        .name-cont{
+            background-color: #fac1c1;
+            padding: 20px;
+            margin-bottom: 30px;
+            width: fit-content;
+            height: fit-content;
+        }
+        .name-cont input{
+            font-size: larger;
+            padding: 5px;
+            background-color: #ecc2c2;
+            width: 170px;
+        }
+        .name-cont span{
+            display: block;
+            font-size: larger;
+            text-wrap: nowrap;
+            margin-bottom: 10px;
+        }
+        .modal-button-cont{
+            background-color: #c1e3fa;
+            padding: 20px;
+            margin-bottom: 30px;
+            width: fit-content;
+            height: fit-content;
+        }
+        .modal-button-cont button{
+            padding: 5px 20px;
+            background-color: #a3d4f5;
+        }
+        #modal{
+            display: none;
+            position: fixed; 
+            z-index: 1; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: #000000; 
+            background-color: #00000066; 
+            backdrop-filter: none;
+            transition: all 3s;
+        }
+        .modal-content {
+            background-color: #c1e3fa;
+            box-shadow: 0px 0px 50px 10px hsla(0, 0%, 100%, 0.4);
+            margin: 15% auto;
+            padding: 20px;
+            width: 200px;
+            border-radius: 20px;
+        }
+        .modal-content button{
+            padding: 5px 20px;
+            background-color: #a3d4f5;
+        }
+
+        .lights{
+            display: flex;
+            background-color: #acacac;
+            padding: 20px;
+            width: fit-content;
+            border-radius: 20px;
+        }
+        .lights div{
+            margin: 0px 10px;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+
+            transition: all .5s;
+            
+        }
+        /*#6e5454|#747457|#72805f == */
+        #red{background-color: #e23939;}
+        #yellow{background-color: #747457; }
+        #green{background-color: #72805f; }
+
+
+
+
+        .book-cont{
+            background-color: #ffda8a;
+            padding: 10px;
+            margin-bottom: 30px;
+            width: fit-content;
+            height: fit-content;
+            border-radius: 10px;
+        }
+        .book-cont span{
+            transition: all .2s;
+            margin: 10px;
+            padding: 5px;
+            display: block;
+            font-size: larger;
+            text-wrap: nowrap;
+
+            cursor: pointer;
+
+        }
+
+        :root{
+            --bottomColor: #7b86a7;
+            --topColor: #00000000;
+            --bottom: 53px
+        }
+
+        #tooltip {
+            display: none;
+            position: absolute;
+            padding: 10px;
+            color: #fff;
+            background-color: #7b86a7;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            width: 175px;
+            margin: 10px;
+            height: 35px;
+            transition: opacity 2s;
+        }
+
+        #tooltip:before {
+            content: ' ';
+            position: absolute;
+            bottom: var(--bottom);
+            left: 8px;
+            border: 10px solid transparent;
+            border-bottom-color: var(--bottomColor);
+            border-top-color: var(--topColor);
+        }
+
+
+
+        #collapsing-list{
+            background-color: #ccf394;
+        }
+        #collapsing-list span{
+            margin-left: -40px;
+        }
+        #collapsing-list span:hover{
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+
+        #resizable-cont{
+            height: 70px;
+            width: 400px;
+            border: 4px double gray;
+            padding: 10px;
+            position: relative;
+        }
+        #resizer{
+            width: 10px;
+            height: 10px;
+            border: 4px solid transparent;
+            border-bottom-color: #7b86a7;
+            border-right-color: #7b86a7;
+            position: absolute;
+            margin: 5px;
+            bottom: 0px;
+            right: 0px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="name-cont">
+        <span>Your name(no digits):</span> 
+        <input type="text" id="name-input">
+    </div>
+    <hr>
+    <div class="modal-button-cont">
+        <button onclick="toggle_modal_window()" id="modal-open-button">Open</button>
+    </div>
+    <div id="modal">
+        <div class="modal-content">
+            <p>Hello there</p>
+            <button onclick="toggle_modal_window()" id="modal-close-button">Close</button>
+        </div>
+    </div>
+    <hr>
+    <div onselectstart="return false" id="resizable-cont">
+        <p >Not too fast please</p>
+        <div id="resizer"></div>
+    </div>
+    <hr>
+    <div class="lights">
+        <div id="red"></div>
+        <div id="yellow"></div>
+        <div id="green"></div>
+        <button onclick="toggle_lights()">Next</button>
+    </div>
+    <hr>
+    <div id="tooltip">
+        Try making your window very small!
+    </div>
+    <div class="tooltip-button">
+        <button  id="tooltip-button">Hover here!</button>
+    </div>
+    
+    <hr>
+    <div class="book-cont" id="books">
+        <span>"The Great Gatsby" by F. Scott Fitzgerald</span> 
+        <span>"To Kill a Mockingbird" by Harper Lee</span> 
+        <span>"1984" by George Orwell </span>
+        <span>"Pride and Prejudice" by Jane Austen</span>
+        <span>"The Catcher in the Rye" by J.D. Salinger</span>
+        <span>"Harry Potter and the Sorcerer's Stone" by J.K. Rowling</span>
+        <span>"The Lord of the Rings" by J.R.R. Tolkien</span>
+    </div>
+    <hr>
+    <div id="collapsing-list">
+        <ul>
+            <span>This PC</span>
+            <li>
+                <ul>
+                    <span>Local disk C:</span>
+                    <li>Program Files</li>
+                    <li>Program Filesx86</li>
+                    <li>Windows</li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <span>Local Disk D:</span>
+                    <li>Personal</li>
+                    <li>Videos</li>
+                    <li>
+                        <ul>
+                            <span onselectstart="return false">Documents</span>
+                            <li>Work</li>
+                            <li>Homework</li>
+                            <li>Not Homework</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <hr>
+    
+</body>
+</html>

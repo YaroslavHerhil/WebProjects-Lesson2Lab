@@ -10,13 +10,44 @@
 <body>
     <div class="game_content">
         <div class="geese_tab">
-            <span>Honk Honk</span>
+
+            <div class="currency-list">
+                <span>Money: </span>
+                <span><span id="money_hud">0</span><span> GD</span></span>
+
+                <span>Production: </span>
+                <span><span id="production_hud">0</span><span>GD/s</span></span>
+            </div>
+            
+
+            <div id="geese-list">
+            </div>
         </div>
         <div class="misc_tabs">
+            <div class="menu">
+                <button onclick="change_tab(event.currentTarget, 'main')" class="tab-btn">Main</button>
+                <button onclick="change_tab(event.currentTarget, 'upgrades')" class="tab-btn">Upgrades</button>
+                <button onclick="change_tab(event.currentTarget, 'settings')" class="tab-btn">Settings</button>
+            </div>
+            <div class="active-tabs">
+                <div id="main" class="tabs">
+                    <button onclick="buy_geese('reg_geese')" onmouseenter="description('reg_geese')" onmouseleave="close_description()" id="reg-goose-button">Regular Goose</button>
+                    <button onclick="buy_geese('fluf_geese')" onmouseenter="description('fluf_geese')" onmouseleave="close_description()" id="fluff-goose-button">Fluffy Goose</button>
+                    <hr>
+                    <button id="coop-button">Coop</button>
+                </div>
+                <div id="settings" class="tabs">I am settings</div>
+                <div id="upgrades" class="tabs">I will be upgraded</div>
+            </div>
+
 
         </div>
         <div class="statistics_tab">
-            <span id="money_hud">0</span><span> GD</span>
+            <span id="title">Welcome to Goose Goose Goose!</span><br>
+            <span id="desc">Buy geese, earn money, buy more geese, earn more money - and so on and so on!</span>
+            <div id="stats">
+
+            </div>
         </div>
     </div>
 </body>

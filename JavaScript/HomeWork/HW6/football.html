@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(Football_field\ rotated.svg) 0 0 no-repeat;
+            background-size: cover;
+        }
+        #ball{
+            position: absolute;
+            background-color: #380f5f;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+            transition: all 1s ease-out;
+            top: 0px;
+            left: 0px;
+            background-image: url(football.png);
+            background-size:contain;
+
+        }
+        #ball:hover{
+            background-color: #861124;
+        }
+    </style>
+</head>
+<body>
+    <div id="ball"></div>
+
+    <script>
+        let animation = null;
+
+        window.addEventListener("click", move_ball )
+        function move_ball(event) {
+            let ball = document.getElementById("ball");
+            let x = event.clientX;
+            let y = event.clientY;
+debugger
+            if(x > window.innerWidth)
+                x = window.innerWidth;
+            else if(x < 0)
+                x = 0;
+            if(y > window.innerHeight)
+                y = window.innerHeight;
+            else if(y < 0)
+                y = 0;
+            
+            ball.style.left = (x - 25) + "px";
+            ball.style.top = (y - 25) + "px";
+        }
+    </script>
+</body>
+</html>

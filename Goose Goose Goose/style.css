@@ -3,7 +3,7 @@ html{height: 100%;}
 body{
     overflow-x: hidden;
     margin: 0px;
-    background-color:beige ;
+    background-color:rgb(226, 176, 111) ;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -22,20 +22,111 @@ body{
 }
 
 .geese_tab{
+    padding-top: 25px;
+    display: block;
+
     width: 20%;
     min-width: 100px;
     max-width: 250px;
 }
+
+.currency-list{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 20px;
+    margin-bottom: 20px;
+}
+#geese-list{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-auto-rows: 20px;
+}
+
+.geese_tab .separator{
+    border-top: 1px solid;
+    grid-column: span 2;
+}
+
 .misc_tabs{
     min-width: 100px;
     overflow: auto;    
-    margin: 0px 5px;
+    margin: 0px 10px;
     flex: 1;
 }
+
+.menu{
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+}
+
+
+.menu button{
+    border: .5px solid;
+    border-bottom: none;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+
+    margin: 0;
+    padding: 5px 10px 03px 10px;
+    width: max-content;
+    text-wrap: nowrap;
+
+    background-color: #f3bd76;
+}
+.menu button:hover{
+    cursor: pointer;
+    background-color: #e7b068;
+}
+
+.active-tabs{
+    background-color: #e7b068;
+    height: 90%;
+}
+
+#main{
+    display: none;
+    
+    padding: 10px;
+}
+#main button{
+    background-color: #fddcb1;
+    padding: 5px;
+}
+#settings{
+    display: none;
+}
+#something{
+    display: none;
+}
+
+
+
+
 
 .statistics_tab{
     margin-left: auto;
     width: 20%;
     min-width: 80px;
     max-width: 200px;
+}
+
+#title{
+    font-size: 24px;
+    display: block;
+}
+#desc{
+    display: block;
+
+    font-size: 18px;
+    border: solid transparent;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+}
+#stats{
+    line-height: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-auto-rows: 40px;
 }
