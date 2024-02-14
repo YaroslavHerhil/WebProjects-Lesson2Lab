@@ -1,9 +1,11 @@
 html{height: 100%;}
 
 body{
+    /*Photo by Brandon Randolph on pexels.con!*/
+    background-image: url(brandon-randolph-farm.jpg);
+    background-size: cover;
     overflow-x: hidden;
     margin: 0px;
-    background-color:rgb(226, 176, 111) ;
     height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -12,12 +14,10 @@ body{
     height: 100%;
     display: flex;
     padding: 10px 20px;
-    grid-template-columns: 3;
-    grid-template-rows: 1;
 }
 
 .geese_tab, .statistics_tab, .misc_tabs{
-    background-color: #ffcb87;
+    background-color: #ffcb87d2;
     padding: 0px 20px;
 }
 
@@ -26,8 +26,8 @@ body{
     display: block;
 
     width: 20%;
-    min-width: 100px;
-    max-width: 250px;
+    min-width: 200px;
+    max-width: 350px;
 }
 
 .currency-list{
@@ -91,10 +91,11 @@ body{
     padding: 10px;
 }
 #main button{
+    margin: 2px;
     background-color: #fddcb1;
     padding: 5px;
 }
-#settings{
+#saves{
     display: none;
 }
 #something{
@@ -108,8 +109,8 @@ body{
 .statistics_tab{
     margin-left: auto;
     width: 20%;
-    min-width: 80px;
-    max-width: 200px;
+    min-width: 120px;
+    max-width: 350px;
 }
 
 #title{

@@ -14,9 +14,13 @@
             <div class="currency-list">
                 <span>Money: </span>
                 <span><span id="money_hud">0</span><span> GD</span></span>
+                <span>Feathers: </span>
+                <span><span id="feather_hud">0</span><span> F</span></span>
 
                 <span>Production: </span>
-                <span><span id="production_hud">0</span><span>GD/s</span></span>
+                <span><span id="money-production_hud">0</span><span>GD/s</span></span>
+                <span></span>
+                <span><span id="feather-production_hud">0</span><span>F/s</span></span>
             </div>
             
 
@@ -27,17 +31,21 @@
             <div class="menu">
                 <button onclick="change_tab(event.currentTarget, 'main')" class="tab-btn">Main</button>
                 <button onclick="change_tab(event.currentTarget, 'upgrades')" class="tab-btn">Upgrades</button>
-                <button onclick="change_tab(event.currentTarget, 'settings')" class="tab-btn">Settings</button>
+                <button onclick="save_data()" class="save-btn">Save</button>
             </div>
             <div class="active-tabs">
                 <div id="main" class="tabs">
-                    <button onclick="buy_geese('reg_geese')" onmouseenter="description('reg_geese')" onmouseleave="close_description()" id="reg-goose-button">Regular Goose</button>
-                    <button onclick="buy_geese('fluf_geese')" onmouseenter="description('fluf_geese')" onmouseleave="close_description()" id="fluff-goose-button">Fluffy Goose</button>
+                    <div id="buy-geese-buttons">
+
+                    </div>
                     <hr>
-                    <button id="coop-button">Coop</button>
+                    <div id="buy-building-buttons">
+
+                    </div>
                 </div>
-                <div id="settings" class="tabs">I am settings</div>
-                <div id="upgrades" class="tabs">I will be upgraded</div>
+                <div id="upgrades" class="tabs">
+                    
+                </div>
             </div>
 
 
