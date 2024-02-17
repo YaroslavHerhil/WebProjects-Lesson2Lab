@@ -483,6 +483,8 @@ let locked_buildings = create_locked_buildings();
 
 
 function load_data(){
+    if(window.localStorage.length > 0){
+
         geese = JSON.parse(localStorage.getItem("geese"));
         buildings = JSON.parse(localStorage.getItem("buildings"));
         upgrades = JSON.parse(localStorage.getItem("upgrades"));
@@ -516,7 +518,8 @@ function load_data(){
         if("crimson_moon" in bought_upgrades){
             upgrades_effects.crimson_moon();
         }
-
+    }
+    
 }
 
 
