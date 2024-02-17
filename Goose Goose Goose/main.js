@@ -12,7 +12,7 @@ let exp = 0;
 let exp_mod = 1;
 let exp_to_next = 100;
 let exp_creep = 1.5;
-let points = 20;
+let points = 0;
 let lvl = 1;
 
 let fragments = 0;
