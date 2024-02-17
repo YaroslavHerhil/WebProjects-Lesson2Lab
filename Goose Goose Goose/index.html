@@ -8,29 +8,62 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="modal">
+        <div id="modal-content">
+            Choose a blessing to carry in your next loop
+            <div id="blessing-cont">
+                <div onclick="select_blessing(0)">
+                    <img src="assests/crimson-moon.png" alt="">
+                    <span>Crimson Moon</span>
+
+                </div>
+                <div onclick="select_blessing(1)">
+                    <img src="assests/dark-sun.jpg" alt="">
+                    <span>Dark Sun</span>
+                </div>
+                <div onclick="select_blessing(2)">
+                    <img src="assests/blue star.jpg" alt="">
+                    <span>Blue Star</span>
+                </div>
+            </div>
+
+            <p id="blessing-desc">
+                Choose the blessing
+            </p>
+            <button id="blessing-button">Proceed</button>
+        </div>
+    </div>
     <div class="game_content">
         <div class="geese_tab">
 
             <div class="currency-list">
+                <span id="lvl-hud">Lvl 1:</span>
+                <span id="exp-hud">121/321</span>
+                <progress onmouseenter="exp_description()" onmouseleave="close_description()" value="0" max="100" id="exp-prog"></progress>
                 <span>Money: </span>
                 <span><span id="money_hud">0</span><span> GD</span></span>
                 <span>Feathers: </span>
                 <span><span id="feather_hud">0</span><span> F</span></span>
-
+                
                 <span>Production: </span>
                 <span><span id="money-production_hud">0</span><span>GD/s</span></span>
                 <span></span>
                 <span><span id="feather-production_hud">0</span><span>F/s</span></span>
+                
             </div>
             
-
+            <div id="capacity-cont">
+                <span>Capacity:</span>
+                <span><span id="act-hud"></span>/<span id="max-hud"></span></span>
+            </div>
             <div id="geese-list">
+                
             </div>
         </div>
         <div class="misc_tabs">
             <div class="menu">
-                <button onclick="change_tab(event.currentTarget, 'main')" class="tab-btn">Main</button>
-                <button onclick="change_tab(event.currentTarget, 'upgrades')" class="tab-btn">Upgrades</button>
+                <button onclick="change_tab( 'main')" id="main-tab-btn">Main</button>
+                <button onclick="change_tab('upgrades')" id="upgrades-tab-btn">Upgrades</button>
                 <button onclick="save_data()" class="save-btn">Save</button>
             </div>
             <div class="active-tabs">
@@ -42,9 +75,14 @@
                     <div id="buy-building-buttons">
 
                     </div>
+                    
                 </div>
                 <div id="upgrades" class="tabs">
-                    
+                    <div id="available-upgrades"></div>
+                    <hr>
+                    <div id="bought-upgrades"></div>
+                    <div id="fragments">
+                    </div>
                 </div>
             </div>
 
