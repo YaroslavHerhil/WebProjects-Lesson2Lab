@@ -1033,6 +1033,8 @@ let upgrades_btn = document.getElementById("upgrades-tab-btn");
 
 let main_tab = document.getElementById('main');
 let upgrades_tab = document.getElementById('upgrades');
+
+change_tab('main');
 function change_tab(tab) {
     switch(tab){
         case 'main':
