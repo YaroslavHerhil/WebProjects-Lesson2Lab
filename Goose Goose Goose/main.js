@@ -25,6 +25,12 @@ let exp_hud = document.getElementById('exp-hud');
 let level_hud = document.getElementById('lvl-hud');
 let exp_prog = document.getElementById('exp-prog');
 
+
+let sun_hud = document.getElementById('sun_hud');
+let star_hud = document.getElementById('star_hud');
+let moon_hud = document.getElementById('moon_hud');
+
+
 let money_hud = document.getElementById("money_hud");
 let feather_hud = document.getElementById("feather_hud");
 let max_hud = document.getElementById("max-hud");
@@ -777,6 +783,16 @@ function load_upgrades(){
 }
 
 function update_hud(){
+    if(bs_boost != 0 || ds_boost != 0 || cm_boost != 0){
+        star_hud.parentElement.style.display = "flex"
+    }
+    else{
+        star_hud.parentElement.style.display = "none"
+    }
+    star_hud.textContent = bs_boost;
+    moon_hud.textContent = cm_boost;
+    sun_hud.textContent = ds_boost;
+
     m_prod_hud.textContent =  Math.round(calculate_money_prod() * 100) / 100 ;
     money_hud.textContent = Math.round(money * 100) / 100 
     f_prod_hud.textContent = Math.round(calculate_feather_prod() * 100) / 100 ;
@@ -821,7 +837,8 @@ function buy_upgrade(upgrade){
         load_upgrades();
         load_geese();
     }
-
+    update_hud()
+    close_description();
 }
 
 
