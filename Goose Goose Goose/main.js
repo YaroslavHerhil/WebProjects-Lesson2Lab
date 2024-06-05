@@ -985,7 +985,7 @@ function bless_reset(selected_bless){
     exp_mod = 1 + (0.5 * bs_boost);
     exp_to_next = 100;
     exp_creep = 2.0;
-    points = 20;
+    points = 0;
     lvl = 1;
 
     fragments = 0;
