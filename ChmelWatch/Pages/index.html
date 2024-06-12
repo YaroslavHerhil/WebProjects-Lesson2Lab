@@ -5,131 +5,207 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-        html{
-            height: 100%;
+        body, html{
             width: 100%;
-            overflow-x: hidden;
-            margin: 0;
-
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body{
             height: 100%;
-            width: 100%;
 
-            margin: 0;
-
-            background: url(../Images/pexels-hikaique-242124.jpg) rgba(35, 69, 92, 0.449);
-            background-blend-mode:multiply;
-
-            background-size: cover;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-position: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            color: gainsboro;
         }
-
         .site-container{
-            position: relative;
-
-            margin: 0;
+            width: 100%;
             height: 100%;
-            width: 100%;
-        }
-
-        .main-content{
-            height: 150%;
-            max-width: 1400px;
-            min-width: 800px;
-            width: 70%;
-
-            z-index: 100;
-            
-
-            background-color: #e1e1e1;
-
-            margin:auto;
-        }
-
-        .header-grid{
-            position: fixed;
-            height: 100px;
-            width: 100%;
 
             display: grid;
-            grid-template-columns: auto 1fr auto;
-
-
-            background-color: #1f1f1f;
-
-            color: #e1e1e1;
+            grid-template-rows: auto 1fr auto;
         }
 
-        .placeholder{
-            background-color: aliceblue;
-        }
-
-        .menu-grid{
+        .header{
+            background-color: #1d1d1d;
+            grid-row: 1;
+            grid-column: 1;
+            height: 75px;
             display: grid;
+            grid-template-columns: 1fr 8fr 1fr;
+            grid-template-rows: auto;
 
-            background-color: #474747;
-
-            margin: 5px;
-
-            align-items: center;
-            text-align: center;
-
-            width: 800px;
-
-
-            grid-template-columns: auto auto auto auto;
-
-        }
-
-        .menu-grid a{
-            max-width: 200px;
-
-            color: #e1e1e1;
-            text-decoration: none;
-            font-size: larger;
+            position: sticky;
+            top: 0px; right: 0px;
         }
 
         .footer{
-            position: relative;
-            height: 100px;
-            width: 100%;
-            background-color: #1f1f1f;
+            background-color: #1d1d1d;
+            grid-row: 0;
+            grid-column: 1;
+            height: 125px;
+            display: grid;
+            grid-template-columns: 1fr 8fr 1fr;
+            grid-template-rows: auto;
 
+            position: relative;
             bottom: 0;
         }
 
-        .background-text{
-            z-index: -5;
-            position: absolute;
+        .main-content{
+            background-color: rgb(199, 204, 203);
+            grid-row: 0;
+            grid-column: 1;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr 8fr 1fr;
+            grid-template-rows: auto;
+            transition: all 2s ease-in;
+            position: relative;
         }
+
+        .foreground-content{
+            background-color: rgb(129, 129, 129);            
+
+            width: 100%;
+            max-width: 1400px;
+        
+            grid-column: 2;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .main-content, .header, .footer{
+            grid-template-columns:  0% 8fr 0%;
+            }
+        }
+
+        .menu-wrap{
+            grid-column: 2;
+            background-color: #222222;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 1fr auto;
+        }
+
+        .menu-options a{
+            text-decoration: none;
+            color: gainsboro;
+            background-color: #36363b;
+            display: inline-flex;
+            height: 100%;
+            width: 100px;
+            line-height: 75px;
+            justify-content: center;
+            transition: all .2s ease-in-out;
+        }
+        .menu-grid a:hover{
+            background-color: #49494e;
+        }
+        .logo-container {
+            margin: auto;
+        }
+        .logo-container img{
+            height: 100px;
+        }
+
+        .content-segment{
+            display: grid;
+            background-color: mediumseagreen;
+            grid-template-columns:  auto auto;
+        }
+
+        .content-segment {
+            padding: 10px;
+            text-align: justify;
+        }
+
+
+        .content-segment img{
+            margin: 10px;
+            width: 200px;
+            height: auto;
+        }
+
+        .text-segment {
+            display: grid;
+            grid-template-rows: auto auto;
+
+        }
+
+        .text-segment h2{
+            display: inline;
+        }
+
+
+
+
+
+        .gallery-container{
+            background-color: aqua;
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+            height: 200px;
+        }
+        .gallery-container img{
+            display: inline-flex;
+        }
+
+
     </style>
+
 </head>
 <body>
-    <!--Note to future self: make everything into a grid.-->
     <div class="site-container">
-        <div class="header-grid">
-            <div class="placeholder"></div>
-            <div class="menu-grid">
-
-                <a href="">Home</a>
-                <a href="">Home 2</a>
-                <a href="">Home 3: Return</a>
-                <a href="">Home 5</a>
+        <div class="header">
+            <div class="menu-wrap">
+                <div class="menu-options">
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                    <a href="">Home</a>
+                </div>
+                <div class="logo-container">
+                    <img src="../Images/chmelwatch.png" alt="logo">
+                </div>
             </div>
-            <div class="placeholder"></div>
         </div>
         <div class="main-content">
+            <div class="foreground-content">
 
+                <div class="content-segment">
+                    <div class="text-segment">
+                        <h2>Lorem ipsum dolor sit amet consectetur.</h3>
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore cupiditate expedita tempora fugiat dolores ab? Expedita molestias voluptate placeat fugiat maxime consequuntur animi suscipit exercitationem voluptatibus? Repellendus ab earum qui veniam similique, adipisci eos dicta a! Cum cumque officia ex. Molestiae officia aliquid ad deleniti.
+                        </span>
+                    </div>
+                    <div>
+                        <img src="../Images/holder.png" alt="">
+                    </div>
+                </div>
+                
+                <div class="gallery-container">
+                    <img src="../Images/holder.png" alt="">
+                    <img src="../Images/holder.png" alt="">
+                    <img src="../Images/holder.png" alt="">
+                    <img src="../Images/holder.png" alt="">
+                    <img src="../Images/holder.png" alt="">
+                </div>
+
+
+                <div class="guidelines-container">
+                    <ol>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    </ol>
+                </div>
+            </div>
         </div>
         <div class="footer">
-            <div class="footer-grid">
-                
-            </div>
+
         </div>
     </div>
 </body>
