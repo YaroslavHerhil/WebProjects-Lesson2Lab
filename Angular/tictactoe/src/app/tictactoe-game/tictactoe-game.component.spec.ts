@@ -15,6 +15,7 @@ describe('TictactoeGameComponent', () => {
     fixture = TestBed.createComponent(TictactoeGameComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    
   });
 
   it('should create', () => {

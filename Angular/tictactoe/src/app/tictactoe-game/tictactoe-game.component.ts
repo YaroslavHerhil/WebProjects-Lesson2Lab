@@ -51,6 +51,7 @@ export class TictactoeGameComponent {
             document.getElementById(`playerUI`)!.innerHTML = `Player {{player == 1 ? "X" : "O"}}`
 
             return;
+            
         }
 
         if(this.gameService.getCell(index) != 0)
