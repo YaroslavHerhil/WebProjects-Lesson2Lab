@@ -4,152 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <style>
-        body, html{
-            width: 100%;
-            height: 100%;
-
-            font-family: Arial, Helvetica, sans-serif;
-            margin: 0px;
-            color: gainsboro;
-        }
-        .site-container{
-            width: 100%;
-            height: 100%;
-
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-        }
-
-        .header{
-            background-color: #1d1d1d;
-            grid-row: 1;
-            grid-column: 1;
-            height: 75px;
-            display: grid;
-            grid-template-columns: 1fr 8fr 1fr;
-            grid-template-rows: auto;
-
-            position: sticky;
-            top: 0px; right: 0px;
-        }
-
-        .footer{
-            background-color: #1d1d1d;
-            grid-row: 0;
-            grid-column: 1;
-            height: 125px;
-            display: grid;
-            grid-template-columns: 1fr 8fr 1fr;
-            grid-template-rows: auto;
-
-            position: relative;
-            bottom: 0;
-        }
-
-        .main-content{
-            background-color: rgb(199, 204, 203);
-            grid-row: 0;
-            grid-column: 1;
-            height: 100%;
-            display: grid;
-            grid-template-columns: 1fr 8fr 1fr;
-            grid-template-rows: auto;
-            transition: all 2s ease-in;
-            position: relative;
-        }
-
-        .foreground-content{
-            background-color: rgb(129, 129, 129);            
-
-            width: 100%;
-            max-width: 1400px;
-        
-            grid-column: 2;
-        }
-
-        @media only screen and (max-width: 600px) {
-            .main-content, .header, .footer{
-            grid-template-columns:  0% 8fr 0%;
-            }
-        }
-
-        .menu-wrap{
-            grid-column: 2;
-            background-color: #222222;
-            height: 100%;
-            display: grid;
-            grid-template-columns: 1fr auto;
-        }
-
-        .menu-options a{
-            text-decoration: none;
-            color: gainsboro;
-            background-color: #36363b;
-            display: inline-flex;
-            height: 100%;
-            width: 100px;
-            line-height: 75px;
-            justify-content: center;
-            transition: all .2s ease-in-out;
-        }
-        .menu-grid a:hover{
-            background-color: #49494e;
-        }
-        .logo-container {
-            margin: auto;
-        }
-        .logo-container img{
-            height: 100px;
-        }
-
-        .content-segment{
-            display: grid;
-            background-color: mediumseagreen;
-            grid-template-columns:  auto auto;
-        }
-
-        .content-segment {
-            padding: 10px;
-            text-align: justify;
-        }
-
-
-        .content-segment img{
-            margin: 10px;
-            width: 200px;
-            height: auto;
-        }
-
-        .text-segment {
-            display: grid;
-            grid-template-rows: auto auto;
-
-        }
-
-        .text-segment h2{
-            display: inline;
-        }
-
-
-
-
-
-        .gallery-container{
-            background-color: aqua;
-            overflow-x: scroll;
-            flex-wrap: nowrap;
-            height: 200px;
-        }
-        .gallery-container img{
-            display: inline-flex;
-        }
-
-
-    </style>
-
+    <title>ChmelWatch</title>
+    <link rel="stylesheet" href="../Styles/style.css">
 </head>
 <body>
     <div class="site-container">
@@ -167,39 +23,101 @@
         </div>
         <div class="main-content">
             <div class="foreground-content">
-
+                    
                 <div class="content-segment">
                     <div class="text-segment">
                         <h2>Lorem ipsum dolor sit amet consectetur.</h3>
                         <span>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore cupiditate expedita tempora fugiat dolores ab? Expedita molestias voluptate placeat fugiat maxime consequuntur animi suscipit exercitationem voluptatibus? Repellendus ab earum qui veniam similique, adipisci eos dicta a! Cum cumque officia ex. Molestiae officia aliquid ad deleniti.
+                         Cmelwatch was created to help average resident of Chmel to identify and avoid threats local to the area. If the notion before seems strange or you're not familiar with what Chmel is and it's circumstances, leave this page.
+                        We are not a corporation. We do not have personnel, funds or any appropriate equipment. We simply desire for residents of our beautiful city to be able to live.
+                            
+                        <br>
+                        <br>
+                        If you seen any new information about new or existing entities, refer to the guidelines box below.
+                        <br>
+                        <br>    
+                        *Notice* 
+                        At this moment site is undergoing maintenance. Some of the pages will cease to function. We believe this to be a consequence of a memetic device. See appendix to the guidelines.
                         </span>
                     </div>
                     <div>
                         <img src="../Images/holder.png" alt="">
                     </div>
                 </div>
-                
-                <div class="gallery-container">
-                    <img src="../Images/holder.png" alt="">
-                    <img src="../Images/holder.png" alt="">
-                    <img src="../Images/holder.png" alt="">
-                    <img src="../Images/holder.png" alt="">
-                    <img src="../Images/holder.png" alt="">
-                </div>
 
+                <hr>    
+                <div class="gallery-border">
+                    <div class="gallery-container">
+                        <a href="https://stackoverflow.com/questions/45755144/scrollbar-thumb-height-in-css">
+                            <div class="gallery-pic">
+                                <img src="../Images/No_Image_Available.jpg" alt="">
+                            </div>
+                            <div class="title-wrapper">
+                                <span class="gallery-title">
+                                    Game 2: twe nights
+                                </span>
+                            </div>
+                        </a>
+                        <a href="https://stackoverflow.com/questions/45755144/scrollbar-thumb-height-in-css">
+                            <div class="gallery-pic"></div>
+                            <div class="title-wrapper">
+                                <span class="gallery-title">
+                                    Game 2: twe nights
+                                </span>
+                            </div>
+                        </a>
+                        <a href="https://stackoverflow.com/questions/45755144/scrollbar-thumb-height-in-css">
+                            <div class="gallery-pic"></div>
+                            <div class="title-wrapper">
+                                <span class="gallery-title">
+                                    Game 2: twe nights
+                                </span>
+                            </div>
+                        </a>
+                        <a href="https://stackoverflow.com/questions/45755144/scrollbar-thumb-height-in-css">
+                            <div class="gallery-pic"></div>
+                            <div class="title-wrapper">
+                                <span class="gallery-title">
+                                    Game 2: twe nights
+                                </span>
+                            </div>
+                        </a>
+                        <a href="https://stackoverflow.com/questions/45755144/scrollbar-thumb-height-in-css">
+                            <div class="gallery-pic"></div>
+                            <div class="title-wrapper">
+                                <span class="gallery-title">
+                                    Game 2: twe nights
+                                </span>
+                            </div>
+                        </a>
+                        <a href="https://stackoverflow.com/questions/45755144/scrollbar-thumb-height-in-css">
+                            <div class="gallery-pic"></div>
+                            <div class="title-wrapper">
+                                <span class="gallery-title">
+                                    Game 2: twe nights
+                                </span>
+                            </div>
+                        </a>
+                        <a href="https://stackoverflow.com/questions/45755144/scrollbar-thumb-height-in-css">
+                            <div class="gallery-pic"></div>
+                            <div class="title-wrapper">
+                                <span class="gallery-title">
+                                    Game 2: twe nights
+                                </span>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+                    <hr>
 
                 <div class="guidelines-container">
+                    <h1>Guidelines</h1>
                     <ol>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <li>The information you provide must be substantiated by evidence or verified by an independent party. Evidence as small as photo of the affected area is sufficient. Information being provided independently about the same entity will be considered verified.</li>
+                        <li>Do not put yourself under heavy risk of injury or death. Cmelwatch values lifes of individual research more </li>
+                        <li>Any and all reports about the actions of the CDU will be omitted. </li>
+                        <li>Appendix: As of now any and all memetic threats or entities that further benefit from our coverage will be no longer accepted. We came to a conclusion that such a decision was necessary after the Brass Eyes incident</li>
                     </ol>
                 </div>
             </div>

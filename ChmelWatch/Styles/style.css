@@ -1,0 +1,251 @@
+body, html{
+    width: 100%;
+    height: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    color: gainsboro;
+}
+.site-container{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.header{
+    background-color: #1d1d1d;
+    grid-row: 1;
+    grid-column: 1;
+    height: 75px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: auto;
+
+    position: sticky;
+    top: 0px; right: 0px;
+}
+
+.footer{
+    background-color: #1d1d1d;
+    grid-row: 0;
+    grid-column: 1;
+    height: 125px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: auto;
+
+    position: relative;
+    bottom: 0;
+}
+
+.main-content{
+    background-color: rgb(199, 204, 203);
+    grid-row: 0;
+    grid-column: 1;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: auto;
+    transition: all 2s ease-in;
+    position: relative;
+    background-attachment: fixed;
+    background-image: url(../Images/pexels-hikaique-242124.jpg);
+}
+
+.foreground-content{
+    background-color: #bdbdbd;            
+    width: 100%;
+    grid-column: 2;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-content, .header, .footer{
+    grid-template-columns:  0% 5fr 0%;
+    }
+}
+
+.menu-wrap{
+    grid-column: 2;
+    background-color: #222222;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.menu-options a{
+    text-decoration: none;
+    color: gainsboro;
+    background-color: #36363b;
+    display: inline-flex;
+    height: 100%;
+    width: 100px;
+    line-height: 75px;
+    justify-content: center;
+    transition: all .2s ease-in-out;
+}
+.menu-grid a:hover{
+    background-color: #49494e;
+}
+.logo-container {
+    margin: auto;
+}
+.logo-container img{
+    height: 100px;
+}
+
+.content-segment{
+    display: grid;
+    background-color: #49494e;
+    border-radius: 20px;
+    margin: 5px 15px;
+    grid-template-columns:  auto auto;
+
+    width: 1200px;
+    
+    padding: 10px;
+    text-align: justify;
+    margin: auto;
+    margin-top:20px;
+}
+
+
+.content-segment img{
+    margin: 10px;
+    width: 200px;
+    height: auto;
+}
+.content-segment h2{
+    font-size: xx-large;
+    line-height: 60%;
+}
+.content-segment span{
+    font-size: large;
+}
+
+.text-segment {
+    padding: 15px;
+    display: grid;
+    grid-template-rows: auto auto;
+    margin-right: 40px;
+}
+
+.text-segment h2{
+    display: inline;
+}
+
+::-webkit-scrollbar {
+    height: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8b8b8b; 
+    border-radius: 4px;
+    max-width: 10%;
+    width: 11%;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6b6b6b; 
+}
+
+
+
+
+.gallery-border{
+    width: max-content;
+    border-radius: 10px;
+
+    background-color: #49494e;
+    padding: 5px;
+
+    margin: 15px 0px;
+    width: 1200px;
+    margin: auto;
+
+
+}
+
+.gallery-container{
+    height: max-content;
+
+    display: flex;
+
+    overflow-x: scroll;
+
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    background-color: #49494e;
+
+    padding: 5px;
+}
+
+.gallery-container a{
+    display: block;
+    margin: 5px 5px;
+
+    cursor: pointer;
+
+    padding: 10px 15px;
+
+    height: 230px;
+
+    width: fit-content;
+
+    background-color: rgb(104, 104, 104);
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px rgb(49, 49, 49);
+
+    text-decoration: none;
+    text-align: center;
+}
+
+.gallery-pic{
+    margin: auto;
+    border: 1px black solid;
+    border-radius: 5px;
+
+    background-color: aliceblue;
+
+    width: 200px;
+    height: 200px;
+}
+.gallery-pic img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.gallery-title{
+
+    margin: auto;
+    color: gainsboro;
+    font-size: larger;
+}
+
+
+hr{
+    margin: 150px 10px 10px 10px;
+    opacity: 0;
+}
+.guidelines-container{
+    background-color: #49494e;
+    border-radius: 10px;
+
+    background-color: #49494e;
+    padding: 15px;
+
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.guidelines-container ol li{
+    margin-bottom: 40px;
+}

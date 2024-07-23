@@ -1,0 +1,50 @@
+<div class="games-container">
+    <div class="rando-num">
+        <h1>{{theNumber}}</h1>
+        <input type="number" id="lowerRange">
+        <input type="number" id="upperRange">
+        <input type="submit" (click)="getNumbersRange()">
+    </div>
+    <div class="coin-game">
+        <h3 id="headTail">Heads or tails?</h3>
+        <h2 id="winLoss"></h2>
+        <button (click)="coinFlip(0)">Heads</button>
+        <button (click)="coinFlip(1)">Tails</button>
+    </div>
+    <div class="dice-game">
+
+    </div>
+</div>
+
+
+
+
+<style>
+    .games-container {
+        display: grid;
+        grid-template-columns: 400px 600px;
+        grid-template-rows: 300px 300px;
+
+        margin: auto;
+
+        width: 1000px;
+        height: 600px;
+
+        padding: 15px;
+        border-radius: 15px;
+        gap: 10px;
+
+        background-color: #2d0e50;
+    }
+
+    .games-container div{
+        padding: 10px;
+        background-color: #350e61;
+
+
+    }
+
+    .rando-num h1{
+        text-align: center;
+    }
+</style>

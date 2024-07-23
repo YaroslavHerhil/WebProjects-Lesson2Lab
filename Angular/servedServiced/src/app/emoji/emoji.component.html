@@ -1,0 +1,119 @@
+
+<img src="img/confeti.gif" alt="" class="confetti" [ngStyle]="confettiStyle" id="confi1">
+<img src="img/confeti.gif" alt="" class="confetti" [ngStyle]="confettiStyle" id="confi2">
+<img src="img/confeti.gif" alt="" class="confetti" [ngStyle]="confettiStyle" id="confi3">
+
+<div class="score-ui">
+    <span>SCORE:</span>
+    <span>{{score}}</span>
+</div>
+
+<div class="machine-container">
+    <div class = "machine">
+        <div class="slots">
+            <div id="slot1"> <span [innerHTML]="this.slot1"></span></div>
+            <div id="slot2"> <span [innerHTML]="this.slot2"></span></div>
+            <div id="slot3"> <span [innerHTML]="this.slot3"></span></div>
+        </div>
+    </div>
+    <div class="lever" (click)="stopSlot()" >
+    </div>
+</div>
+
+
+<div class="pool-ui">Your pool: <span *ngFor="let moji of this.emojiPool" [innerHTML]="moji.htmlCode[0]"></span></div>
+
+<style>
+    .confetti{
+        display: none;
+        position: absolute;
+        width: 600px;
+        height: 600px;
+        top: 0;
+    }
+
+    #confi1{
+        left: calc(25% - 300px);
+    }
+    
+    #confi2{
+        left: calc(50% - 300px);
+    }
+
+    #confi3{
+        left: calc(75% - 300px);
+    }
+    .score-ui{
+        padding: 20px;
+        width: 550px;
+
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: center;
+        margin: auto;
+        background-color: #2b1579;
+        color: #d8d6f5;
+        font-size: xx-large;
+        font-family: Helvetica;
+
+        border-radius: 15px 15px 0px 0px;
+    }
+
+    .pool-ui{
+        padding: 20px;
+        width: 350px;
+        text-align: center;
+        margin: auto;
+        background-color: #2b1579;
+        color: #d8d6f5;
+        font-size: x-large;
+        font-family: Helvetica;
+
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .machine-container{
+        display: grid;
+        grid-template-columns: auto 100px;
+        width: 1300px;
+        margin: auto;
+    }
+    .lever{
+        z-index: 101;
+        cursor: pointer;
+    }
+
+    .machine{
+        box-shadow: 0px 0px 20px #00000080;
+        background-color: #2b1579;
+        padding: 50px;
+        border-radius: 10px;
+    }
+
+    .slots{
+        
+        display: grid;
+
+        height: 75px;
+        width: 1200px;
+        height: 600px;
+        background-color: #d8d6f5;
+        border: solid 8px #621cbe;
+        border-radius: 30px;
+
+        grid-template-columns: 400px 400px 400px;
+        align-self: center;
+    }
+    .slots div{
+        height: 100%;
+        text-align: center;
+        align-self: center;
+        font-size: 256px;
+    }
+    .slots div span{
+        line-height: 600px;
+        vertical-align: middle;
+    }
+   
+
+</style>

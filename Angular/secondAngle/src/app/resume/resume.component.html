@@ -1,0 +1,213 @@
+<div id="resume-container">
+    <div id="info-comp">
+        <div id="picture-container">
+            <img src="assets/redherring.png" alt="">
+        </div>
+        <div id="contacts">
+            <h3>
+                Contacts:
+            </h3>
+            <ul>
+                <li id="github-link"><a target="_blank" href="https://github.com/">Github</a></li>
+                <li id="twitter-link"><a target="_blank" href="https://twitter.com/">Twitter</a></li>
+                <li id="linkedin-link"><a target="_blank" href="https://linkedin.com/">LinkedIn</a></li>
+            </ul>
+        </div>
+        <div id="skills">
+            <h3>
+                Skills:
+            </h3>
+            <ul>
+                <li *ngFor="let skill of Skills">{{ skill | uppercase}}</li>
+            </ul>
+        </div>
+    </div>
+    <div id="main-comp">
+        <div id="title" [ngStyle]="CoolNameStyles">
+            <h1>{{FullName | titlecase}}</h1>
+        </div>
+        <div id="summary">
+            <h2 class="sub-title">Summary</h2>
+            <div id="summary-content">
+                <p>As of Today({{Today | date:"mediumDate"}}) I am unempoloyed.</p>
+            </div>
+        </div>
+        <div id="education">
+            <h2 class="sub-title">Education</h2>
+            <div  *ngFor="let education of Educations" [ngClass]="education.class">
+                <h3 class="component-title">{{education.title}}</h3>
+                <p>{{education.content}}</p>
+            </div>
+        </div>
+        <div id="experience">
+            <h2 class="sub-title">Experience</h2>
+            <div  *ngFor="let experience of Experiences" [ngClass]="experience.class">
+                <h3 class="component-title">{{experience.title}}</h3>
+                <p>{{experience.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<style>
+
+    #resume-container{
+        display: grid;
+        grid-template-columns: 400px 600px;
+
+        width: 1000px;
+        
+        height: 100%;
+
+        margin:auto;
+        margin-top: 10px;
+
+        font-family: Helvetica;
+        font-size: larger;
+
+        box-shadow: 0px 0px 10px #00000080;
+    }
+
+    #info-comp{
+        background-color: #d0f6ff;
+    }
+
+
+    #picture-container
+    {
+        
+        padding: 10px;
+        img{
+            display: block;
+            height: 300px;
+            width: 300px;
+            border-radius: 300px;
+
+            margin: auto;
+        }
+    }
+
+    #contacts{
+        margin: 10px 10px 0px 10px;
+        padding: 10px;
+        border-top: 2px solid #527bb8;
+
+        ul{
+            list-style: none;
+            padding-left: 0px;
+            padding-left: 16px;
+        }
+        
+        li{
+            background-size: 20px;
+            background-repeat: no-repeat;
+            background-position: 0px 1px;
+            margin-bottom: 16px;
+        }
+
+        #github-link{
+            background-image: url('assets/github-icon.svg');
+        }
+        #twitter-link{
+            background-image: url('assets/twitter-icon.svg');
+        }
+        #linkedin-link{
+            background-image: url('assets/linkedin-icon.svg');
+        }
+
+        a{
+            padding-left: 30px;
+            text-decoration: none;
+            color: black;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+    
+
+
+    #skills{
+        margin: 10px 10px 0px 10px;
+        padding: 10px;
+        border-top: 2px solid #527bb8;
+
+        li{
+            margin-bottom: 16px;
+        }
+    }
+
+
+
+    #main-comp{
+        box-shadow: 0px 0px 7px #00000050;
+    }
+
+    #title{
+        margin: 0px;
+        background-color: #7b93ff;
+        padding: 0px 20px;
+        line-height: 350%;
+    }
+    .sub-title{
+        margin: 40px 0px 10px 0px;
+        padding: 0px 20px;
+        line-height: 150%;
+        background-color: #a5d5fc;
+    }
+
+
+    
+    #education{
+        background-color: #dceaff;
+        .sub-title{
+            background-color: #8ca8f7;
+        }
+
+
+    }
+    #experience{
+        background-color: #dcf5ff;
+    }
+    #summary{
+        background-color: #dceaff;
+    }
+
+
+    .experienceComponent, .educationComponent, #summary-content{
+        margin: 0px;
+        p{
+            margin: 0;
+            padding: 10px 0px;
+            padding-left: 50px;
+        }
+        
+
+        .component-title
+        {
+            padding-left: 40px;
+            margin: 0px;
+        }
+    }
+
+    .experienceComponent, #summary-content{
+        .component-title{
+            background-color: #a3e5ff;
+        }
+    }
+
+    .educationComponent{
+        .component-title{
+            background-color: #a3acff;
+        }
+    }
+
+
+    
+
+
+
+</style>

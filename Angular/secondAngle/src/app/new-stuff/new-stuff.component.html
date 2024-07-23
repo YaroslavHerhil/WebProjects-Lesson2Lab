@@ -1,0 +1,38 @@
+<!-- <p>Date: {{Today}}</p>
+<p>Upper Text: {{UpperText | uppercase}}</p>
+<p>Lower Text: {{DownerText}}</p>
+<p>Price: {{Price}}</p> -->
+
+<ng-template [ngIf]="isVisibility === true">
+    <div *ngIf="isVisibility === true">
+        <p>Date: {{Today | date:"shortDate"}}</p>
+        <p>Upper Text: {{UpperText | titlecase}}</p>
+        <p>Lower Text: {{DownerText}}</p>
+        <p>Price: {{Price}}</p>
+    </div>
+</ng-template>
+<ng-template #elseBlock>Content to render when condition is false.</ng-template>
+
+
+<div [ngSwitch]="getRandomNumber()">
+    <p *ngSwitchCase="1">Tag 1, Hello!</p>
+    <p *ngSwitchCase="2">Tag 2, Hi!</p>
+    <p *ngSwitchCase="3">Tag 3, Howdy!</p>
+    <p *ngSwitchCase="4">Tag 4, Hiya!</p>
+    <p *ngSwitchDefault>Default, Whatsup!</p>
+</div>
+
+<div>
+    <div [ngClass]="{'active': IsActive, 'disable': IsDisable}">
+        
+    </div>
+    <div [ngClass]="{ClassObject}">
+        <p>
+                    </p>
+    </div>
+
+</div>
+
+
+<div>
+</div>

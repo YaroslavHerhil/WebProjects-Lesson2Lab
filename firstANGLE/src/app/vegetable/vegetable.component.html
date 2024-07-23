@@ -1,0 +1,38 @@
+<div class="gallery">
+    <button (click)="handleClickLeft()" id="left">⬅️</button>
+    <img src="{{getCurrentImage()}}" alt="">
+    <button (click)="handleClickRight()" id="right">➡️</button>
+    <input type="text" name="" placeholder="Image Url here" id="imgUrl">
+    <button (click)="handleGetImage()" style="font-size: 16px">Add image</button>
+</div>
+
+<style>
+.gallery{
+    display: grid;
+    grid-template-columns: 60px 800px 60px;
+    width: max-content;
+    margin: auto;
+    border: 2px solid lightblue;
+}
+.gallery img{
+    height: 400px;
+    width: auto;
+    margin: auto;
+}
+.gallery button{
+    border: none;
+    background-color: transparent;
+    font-size: 36px;
+    text-align: center;
+    align-self: center;
+    padding: auto;
+    transition: all .2s ease-in-out;
+    height: 50px;
+}
+.gallery button:hover{
+    font-size: 38px;
+}
+#imgUrl{
+    grid-column: span 2;
+}
+</style>

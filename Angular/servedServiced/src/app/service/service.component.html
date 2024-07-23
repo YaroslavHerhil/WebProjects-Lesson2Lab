@@ -1,0 +1,32 @@
+<p>service works!</p>
+
+
+
+<div *ngIf="authService.getAuthStatus(); else loginForm">
+    <h1 class="menacing-welcome">
+        WELCOME
+    </h1>
+    <button (ngClick)="logout()">log out</button>
+</div>
+<ng-template #loginForm>
+    <form class="auth-cont" (ngSubmit)= "login()" action="">
+        <label for="nameInput">Username</label>
+        <input [(ngModel)] = "userName" name="nameInput" type="text">
+        <label for="passInput">Password</label>
+        <input [(ngModel)] = "userPass" name="passInput" type="password">
+
+        <input type="submit" name="" id="" value="Log In">
+    </form>
+</ng-template>
+
+
+
+<style>
+    .auth-cont{
+        display: grid;
+        grid-template-columns: 400px;
+        grid-template-rows: 30px 30px 30px 30px 30px;
+    }
+
+
+</style>
