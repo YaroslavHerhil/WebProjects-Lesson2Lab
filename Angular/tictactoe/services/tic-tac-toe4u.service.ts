@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { TttAiService } from './ttt-ai.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TicTacToe4uService {
 
-    constructor() { }
+    constructor(public aiService:TttAiService) { }
 
     private gameMatrix:number[][] = [
         [0,0,0],
@@ -26,15 +27,14 @@ export class TicTacToe4uService {
         return this.gameMatrix[x][y];
     }
 
-    public setCell(index:number, value:number){
-        let x = Math.floor(index/3);
-        let y = index % 3;
+    public setCell(indexX:number,indexY:number, value:number){
+       
 
-        if((x < 0 || x > 2) || (y < 0 || y > 2) || (value < 0 || value > 2)){
+        if((indexX < 0 || indexX > 2) || (indexY < 0 || indexY > 2) || (value < 0 || value > 2)){
             return;
         }
 
-        this.gameMatrix[x][y] = value;
+        this.gameMatrix[indexX][indexY] = value;
     }
 
 
@@ -86,6 +86,15 @@ export class TicTacToe4uService {
             [0,0,0],
             [0,0,0]
         ];
+    }
+
+    public placeTicAiSmart(type:number){
+        let smartMovePosition = this.aiService.getSmartMove(this.gameMatrix, type);
+        this.setCell(smartMovePosition[0], smartMovePosition[1], type);
+    }
+    public placeTicAiSilly(type:number){
+        let sillyMovePosition = this.aiService.getDumbMove(this.gameMatrix);
+        this.setCell(sillyMovePosition[0], sillyMovePosition[1], type);
     }
 
 }
