@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import './App.css';
-import Quiz from './questionableStuff/Quiz.js';
+import './QuizApp.css';
+import Quiz from './Quiz.js';
 
 
 
-function App() {
+export default function QuizApp() {
 	const [answers, setAnswers] = useState([0,0,0,0,0]);
 
 	const handleAnswerChanges = (index, value) =>{
@@ -16,7 +16,7 @@ function App() {
 
 
 	return (
-		<div className="App">
+		<div className="QuizApp">
 			<div className='sticky-element'><h3 className="counter">{answers.filter(x=>x==1).length}/5</h3></div>
 
 			<Quiz question="In 1986 what animal consumed the most amount of nails?" image="/nails.jpg" answer="Moose" index={0} onAnswerChanged={handleAnswerChanges}/>
@@ -29,4 +29,3 @@ function App() {
 	);
 }
 
-export default App;
