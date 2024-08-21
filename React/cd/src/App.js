@@ -64,7 +64,7 @@ function App() {
 
 
 	return (
-		<Router>
+		<div>
 			<ul>
 				<li>
 					<Link to="/" onClick={setRouteIndex(0)}>this page</Link>
@@ -82,18 +82,16 @@ function App() {
 					<Link to="/CoolButton" onClick={setRouteIndex(4)}>Cool button</Link>
 				</li>
 			</ul>
-			<nav>
 				<button onClick={previousRoute}>&lt;</button>
 
 				<button onClick={nextRoute}>&gt;</button>
-			</nav>
 			<Routes>
 				<Route path="/Quiz" element={<QuizApp></QuizApp>} />
 				<Route path="/InfoStuffs" element={<InfoApp></InfoApp>} />
 				<Route path="/Shakespear" element={<Shackespear></Shackespear>} />
 				<Route path="/CoolButton" element={<CoolButton></CoolButton>} />
 			</Routes>
-		</Router>
+		</div>
 	);
 }
 
