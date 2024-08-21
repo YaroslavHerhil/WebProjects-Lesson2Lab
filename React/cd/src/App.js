@@ -35,12 +35,13 @@ function App() {
 		"/",
 		"/InfoStuffs",
 		"/Quiz",
-		"/Shackespear",
+		"/Shakespear",
 		"/CoolButton",
 	]
 
 
 	const nextRoute = () => {
+		console.log("btn"+routeIndex);
 		if (routeIndex != savedRoutes.length - 1) {
 			setRouteIndex(routeIndex + 1);
 		}
@@ -49,8 +50,10 @@ function App() {
 		}
 
 		navigate(savedRoutes[routeIndex]);
+		console.log("btn"+routeIndex);
 	}
 	const previousRoute = () => {
+		console.log("btn"+routeIndex);
 		if (routeIndex != 0) {
 			setRouteIndex(routeIndex - 1);
 		}
@@ -67,19 +70,19 @@ function App() {
 		<div>
 			<ul>
 				<li>
-					<Link to="/" onClick={setRouteIndex(0)}>this page</Link>
+					<Link to="/" onClick={() => {setRouteIndex(0);console.log("menu"+routeIndex);}}>this page</Link>
+				</li>
+				<li >
+					<Link to="/InfoStuffs" onClick={() => {setRouteIndex(1);console.log("menu"+routeIndex);}}>Info stuff</Link>
 				</li>
 				<li>
-					<Link to="/InfoStuffs" onClick={setRouteIndex(1)}>Info stuff</Link>
+					<Link to="/Quiz" onClick={() => {setRouteIndex(2);console.log("menu"+routeIndex);}}>Quiz</Link>
 				</li>
 				<li>
-					<Link to="/Quiz" onClick={setRouteIndex(2)}>Quiz</Link>
+					<Link to="/Shakespear" onClick={() => {setRouteIndex(3);console.log("menu"+routeIndex);}}>Shake</Link>
 				</li>
 				<li>
-					<Link to="/Shakespeare" onClick={setRouteIndex(3)}>Shake</Link>
-				</li>
-				<li>
-					<Link to="/CoolButton" onClick={setRouteIndex(4)}>Cool button</Link>
+					<Link to="/CoolButton" onClick={() => {setRouteIndex(4);console.log("menu"+routeIndex);}}>Cool button</Link>
 				</li>
 			</ul>
 				<button onClick={previousRoute}>&lt;</button>
