@@ -1,5 +1,5 @@
 
-export default function Bulb(props){
+export default function BulbComponent(props){
     return(
         <div onClick={props.bulbClick}>
             <img src="images.jpg"></img>
