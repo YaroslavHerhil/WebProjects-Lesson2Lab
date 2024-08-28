@@ -63,14 +63,7 @@ export default function UpgradesComponent(props) {
     }
 
 
-
-
-    const [availableUpgrades, setAvailableUpgrades] = useState();
-    const [availableBulbUpgrades, setAvailableBulbUpgrades] = useState();
-
-
     const renderBulbUpgrades = (bulbsLibrary) => {
-
         return bulbsLibrary.map((element, index) => {
             if (element.level != 0) {
                 return (

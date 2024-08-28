@@ -32,11 +32,43 @@
 	color: rgb(0, 0, 0);
 	font-size: larger;
 	
-	border: 2px solid #000000;
+	border: 3px solid #000000;
 	border-radius: 5px;
-	box-shadow: 0px 5px 0px;
 }
+.save-container{
+	position: absolute;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 10px;
+	width: max-content;
+	height: 60px;
 
+	bottom: 30px;
+	left: 50px;
+
+	padding: 10px;
+
+	background-color: white;
+	color: rgb(0, 0, 0);
+	font-size: larger;
+	
+	border: 3px solid #000000;
+	border-radius: 5px;
+}
+.save-erase-btn{
+	display: grid;
+	text-align: center;
+	margin: auto;
+
+	cursor: pointer;
+
+	background-color: #ffffff;
+	color: black;
+	
+	border: 2px solid #363636;
+	border-radius: 5px;
+	padding: 10px 10px;
+}
 
 .bulb-zone{
 	background: radial-gradient( #ffffff 10%, #000000 100%);
@@ -83,7 +115,7 @@
 	padding: 10px;
 	padding-top: 20px;
 	padding-left: 10px;
-	border-left: solid black 2px;
+	border-left: solid black 3px;
 	border-radius: 10px 0px 0px 10px;
 }
 .main-upgrade:hover{
