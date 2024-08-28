@@ -1,0 +1,224 @@
+.app {
+	background-color: white;
+	height: 100vh;
+	width: 100vw;
+
+	font-family: Lemonade;
+
+	display: grid;
+	grid-template-columns: auto 600px;
+	overflow: hidden;
+
+	user-select: none;
+}
+
+.info-ui {
+	z-index: 100;
+
+	position: absolute;
+	width: max-content;
+	height: 130px;
+
+	top: 30px;
+	left: 50px;
+
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 0px 50px;
+
+	padding: 10px;
+
+	background-color: white;
+	color: rgb(0, 0, 0);
+	font-size: larger;
+	
+	border: 2px solid #000000;
+	border-radius: 5px;
+	box-shadow: 0px 5px 0px;
+}
+
+
+.bulb-zone{
+	background: radial-gradient( #ffffff 10%, #000000 100%);
+	background-repeat: no-repeat;
+	background-size: 200% 200%;
+	background-position: 50% 50%;
+	margin-right: -10px;
+
+
+    animation: Lights 5s ease-in-out infinite alternate;
+}
+
+@keyframes Lights {
+    0% {
+		background-size: 100% 100%;
+	}
+    100% {
+		background-size: 200% 200%;
+	}
+}
+.bulb-img{
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+	width: 500px;
+	height: 750px;;
+	
+}
+
+
+
+.upgrade-zone{
+	
+	width: calc(600px - 10px);
+	overflow-y: scroll;
+	overflow-x: hidden;
+
+	background-color: #ffffff;
+	color: black;
+	font-size: large;
+	padding: 10px;
+	padding-top: 20px;
+	padding-left: 10px;
+	border-left: solid black 2px;
+	border-radius: 10px 0px 0px 10px;
+}
+.main-upgrade:hover{
+	background-image: url(../public/button/upgrade2.png);
+}
+.main-upgrade{
+
+	background-image: url(../public/button/upgrade1.png);
+
+	width: 570px;
+	height: 56px;
+	display: grid;
+	grid-template-rows: 30px 20px;
+	text-align: center;
+	padding-top: 60px;
+	margin: auto;
+	margin-bottom: 10px;
+
+	cursor: pointer;
+
+	background-color: #ffffff;
+	color: black;
+	
+	border: 2px solid #363636;
+	border-radius: 5px;
+
+}
+
+.main-upg-cost{
+	font-size: medium;
+}
+
+
+.bulb-upgrades{
+	display: grid;
+	gap: 20px;
+
+}
+
+.bulb-upgrade{
+	display: grid;
+	width: 570px;
+	margin: auto;
+	grid-template-columns: 110px 440px;
+	grid-template-rows: 165px;
+	gap: 20px;
+	padding: 5px 0px;
+	opacity: 0;
+
+	border: 2px solid #363636;
+	border-radius: 5px;
+
+	animation: Appear 3s ease-in-out forwards;
+}
+
+.bulb-upgrade img{
+	width: 110px;
+	height: 155px;
+}
+
+.bulb-wrapper{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto auto;
+	padding: 10px;
+
+}
+
+.bulb-wrapper button{
+	grid-row: 3;
+	grid-column: 2;
+}
+.bulb-wrapper span{
+	grid-column: 1;
+}
+
+.bulb-name{
+	font-size: larger;
+	font-weight: 700;
+	align-self: baseline;
+}
+.bulb-level{
+	font-size: small;
+	align-self: auto;
+}
+
+.bulb-cost{
+	align-self: center;
+}
+
+
+.bulb-upgrade-btn{
+
+
+	display: grid;
+	text-align: center;
+	margin: auto;
+
+	cursor: pointer;
+
+	background-color: #ffffff;
+	color: black;
+	
+	border: 2px solid #363636;
+	border-radius: 5px;
+	padding: 10px 10px;
+}
+
+
+
+
+@keyframes Appear {
+    0% {
+		opacity: 0;
+	}
+    100% {
+		opacity: 1;
+	}
+}
+
+
+
+@keyframes bulbClick {
+	0% {
+	  transform: rotate(0deg) skew(0deg, 0deg);
+	}
+	50% {
+	  transform: rotate(var(--random-rotation)) skew(var(--random-skew-x), var(--random-skew-y));
+	}
+	100% {
+	  transform: rotate(0deg) skew(0deg, 0deg);
+	}
+  }
+  
+  .bulb-clicked {
+	animation: bulbClick 0.5s forwards;
+  }
+
